@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.0
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0-3...v1.0.0)
+
+### 🏡 Chore
+
+- Upgrade ([ddc3447](https://github.com/Exponential-Workload/cinny-desktop/commit/ddc3447))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.0-3
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0-2...v1.0.0-3)

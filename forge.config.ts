@@ -10,6 +10,11 @@ import { WebpackPlugin } from '@electron-forge/plugin-webpack';
 import { mainConfig } from './webpack.main.config';
 import { rendererConfig } from './webpack.renderer.config';
 
+import semver from 'semver';
+import { readFileSync } from 'fs-extra';
+
+const pkg = JSON.parse(readFileSync('package.json', 'utf-8'));
+
 const binaryName = 'Cinny';
 
 const config: ForgeConfig = {
@@ -18,7 +23,9 @@ const config: ForgeConfig = {
   },
   rebuildConfig: {},
   makers: [
-    new MakerSquirrel({}),
+    new MakerSquirrel({
+      version: semver.parse(pkg.version)?.prerelease ? '0.0.0' : pkg.version,
+    }),
     new MakerZIP({}, ['darwin', 'linux']),
     ...(process.env.BUILD_FLATPAK
       ? [

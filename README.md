@@ -10,15 +10,17 @@ Unofficial Desktop application for [Cinny](https://cinny.in/) (a browser-based [
 
 ## Notice
 
-This makes a single request to github on start, to check for updates (so we can notify you about them), meaning github knows when you opened Cinny. They get no information other than that you opened it.
+This makes a single request to Github on start, to check for updates (so we can notify you about them), meaning Github could know when you open Cinny. Depending on how schizo your threat model is, this could be a downside.
+
+They get no information other than that you opened it.
 
 ## Prebuilt Binaries
 
-These are built by github.
+These are built by Github.
 
 - [Linux Binary Archive](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-bin-x64.tar.gz)
 - [Debian Package](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/debian-x64.deb)
-- Flatpak (soon - if someone can help me troubleshoot, it'd be greatly appreciated - [contact me](https://matrix.to/#/@3xpo:matrix.org))
+- Flatpak (soon - if someone can help me troubleshoot the electron-forge flatpak builder, it'd be greatly appreciated - [contact me](https://matrix.to/#/@3xpo:matrix.org))
 - [Windows Binary Archive](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/windows-bin-x64.zip)
 - [Windows Installer](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/windows-setup-x64.exe)
 

@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.0.1
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0...v1.0.1)
+
+### 🚀 Enhancements
+
+- Half-decent README ([a3dbd3e](https://github.com/Exponential-Workload/cinny-desktop/commit/a3dbd3e))
+- Readme image, license ([367acc7](https://github.com/Exponential-Workload/cinny-desktop/commit/367acc7))
+- Add --license and --version ([3470920](https://github.com/Exponential-Workload/cinny-desktop/commit/3470920))
+
+### 🩹 Fixes
+
+- Rephrase notice, capitalize github ([95fe32b](https://github.com/Exponential-Workload/cinny-desktop/commit/95fe32b))
+
+### 🏡 Chore
+
+- Yap some more ([f202052](https://github.com/Exponential-Workload/cinny-desktop/commit/f202052))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.0
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0-3...v1.0.0)

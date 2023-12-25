@@ -15,9 +15,9 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
-const prefix = `${chalk.grey('[')}${chalk.green(
-  'Electron Host Process',
-)}${chalk.grey(']')}`;
+const prefix = `${chalk.grey('[')}${chalk.green('Cinny Host')}${chalk.grey(
+  ']',
+)}`;
 
 const createWindow = (): void => {
   // Create the browser window.

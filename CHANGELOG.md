@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.0.3
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.2...v1.0.3)
+
+### 🩹 Fixes
+
+- Clone prior to npm and pnpm ([308b366](https://github.com/Exponential-Workload/cinny-desktop/commit/308b366))
+
+### 🏡 Chore
+
+- Install cinny deps with npm for some reason this fixes build issues - i could prob configure an npmrc to get pnpm working but this also works ([93946d9](https://github.com/Exponential-Workload/cinny-desktop/commit/93946d9))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.2
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.1...v1.0.2)

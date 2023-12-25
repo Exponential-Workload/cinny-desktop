@@ -27,17 +27,19 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-ubunut
-          path: ./_site/ubunut
+          path: ./_build/ubunut
       - name: Download Michaelsoft Binbows
         uses: actions/download-artifact@v3
         with:
           name: build-binbows
-          path: ./_site/window
+          path: ./_build/window
       # - name: Download Sacking the OS
       #   uses: actions/download-artifact@v3
       #   with:
       #     name: build-sackos
-      #     path: ./_site/mack
+      #     path: ./_build/mack
+      - name: Remove .github
+        run: rm -rf .github
       - name: Create Indexes
         uses: Exponential-Workload/create-index-action@master
         with:

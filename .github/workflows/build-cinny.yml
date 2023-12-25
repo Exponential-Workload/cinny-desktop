@@ -11,10 +11,15 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          cache: 'npm'
       - name: Clone Cinny
         run: git clone https://github.com/cinnyapp/cinny.git .
       - name: Install dependencies
-        run: pnpm i
+        run: npm i
       - name: Build project
         run: pnpm build
       - name: Upload

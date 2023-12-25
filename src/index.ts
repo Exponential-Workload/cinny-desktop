@@ -33,6 +33,33 @@ const prefix = `${chalk.grey('[')}${chalk.green(`Cinny Host ${v}`)}${chalk.grey(
   ']',
 )}`;
 
+if (
+  process.argv.includes('--license') ||
+  process.argv.includes('--legal') ||
+  process.argv.includes('-l')
+) {
+  console.log(`
+    cinny-desktop
+    Copyright (C) 2023  Expo
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+`);
+  process.exit(0);
+} else if (process.argv.includes('--version') || process.argv.includes('-v')) {
+  console.log(v);
+  process.exit(0);
+}
 const priv = [
   {
     scheme: 'cinny',

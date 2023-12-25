@@ -22,7 +22,7 @@ jobs:
         with:
           version: latest
       - name: Clone Cinny
-        run: git clone git@github.com:cinnyapp/cinny.git .
+        run: git clone https://github.com/cinnyapp/cinny.git .
       - name: Install dependencies
         run: pnpm i
       - name: Build project

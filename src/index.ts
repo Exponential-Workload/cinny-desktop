@@ -50,8 +50,12 @@ const createWindow = (): void => {
   // Create the browser window.
   const partition = 'persist:app';
   const session = sessionImport.fromPartition(partition);
-  if (session.protocol.registerSchemesAsPrivileged)
-    session.protocol.registerSchemesAsPrivileged(priv);
+  try {
+    if (typeof session.protocol.registerSchemesAsPrivileged === 'function')
+      session.protocol.registerSchemesAsPrivileged(priv);
+  } catch (error) {
+    console.warn(prefix, 'Got error while trying to privelege schema', error);
+  }
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 600,

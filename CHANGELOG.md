@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.0.4
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.3...v1.0.4)
+
+### 🚀 Enhancements
+
+- Mention dev builds ([252b45c](https://github.com/Exponential-Workload/cinny-desktop/commit/252b45c))
+- Moar icons ([1772812](https://github.com/Exponential-Workload/cinny-desktop/commit/1772812))
+- Type pkg ([e85cc12](https://github.com/Exponential-Workload/cinny-desktop/commit/e85cc12))
+- Use icons ([bffd033](https://github.com/Exponential-Workload/cinny-desktop/commit/bffd033))
+
+### 🩹 Fixes
+
+- Github says failing despite both not failign ([6b5056c](https://github.com/Exponential-Workload/cinny-desktop/commit/6b5056c))
+
+### 🏡 Chore
+
+- Rename release workflow ([f634cc9](https://github.com/Exponential-Workload/cinny-desktop/commit/f634cc9))
+- Rename concurrency group ([ad89a53](https://github.com/Exponential-Workload/cinny-desktop/commit/ad89a53))
+- Call setup node in build ([798332f](https://github.com/Exponential-Workload/cinny-desktop/commit/798332f))
+- Default to 959 width ([3d38810](https://github.com/Exponential-Workload/cinny-desktop/commit/3d38810))
+- Wip thing ([af7e21f](https://github.com/Exponential-Workload/cinny-desktop/commit/af7e21f))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.3
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.2...v1.0.3)

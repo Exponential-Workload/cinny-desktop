@@ -1,8 +1,12 @@
+<div align="center">
+
+![Cinny Desktop on GNOME 45](./cinny-desktop-promo.png)
+
 # Cinny Desktop
 
-Desktop application for [Cinny](https://cinny.in/) - a browser-based Matrix client.
+Unofficial Desktop application for [Cinny](https://cinny.in/) (a browser-based [Matrix](https://matrix.org) client) - utilizing a local build of Cinny.
 
-Includes a local build of Cinny; no need to worry about the feds modifying the post-install application & gaining access to your shit.
+</div>
 
 ## Notice
 
@@ -24,3 +28,21 @@ These are built by github.
 2. Run `pnpm i`
 3. Run `pnpm build`
 4. Enjoy!
+
+## License
+
+        cinny-desktop
+        Copyright (C) 2023  Expo
+
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU Affero General Public License as
+        published by the Free Software Foundation, either version 3 of the
+        License, or (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU Affero General Public License for more details.
+
+        You should have received a copy of the GNU Affero General Public License
+        along with this program.  If not, see <https://www.gnu.org/licenses/>.

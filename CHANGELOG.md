@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v2.0.0-0
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.2.0...v2.0.0-0)
+
+### 🩹 Fixes
+
+- Dont hard exit ([a866aaf](https://github.com/Exponential-Workload/cinny-desktop/commit/a866aaf))
+- Grant permission ([7202b18](https://github.com/Exponential-Workload/cinny-desktop/commit/7202b18))
+
+### 🏡 Chore
+
+- **release:** V1.0.0-0 ([b658550](https://github.com/Exponential-Workload/cinny-desktop/commit/b658550))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.0-0
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.2.0...v1.0.0-0)

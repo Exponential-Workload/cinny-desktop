@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type { ForgeConfig } from '@electron-forge/shared-types';
 import { MakerSquirrel } from '@electron-forge/maker-squirrel';
 import { MakerZIP } from '@electron-forge/maker-zip';
@@ -12,31 +11,43 @@ import { rendererConfig } from './webpack.renderer.config';
 
 import semver from 'semver';
 import { readFileSync } from 'fs-extra';
+import path from 'path';
 
 const pkg = JSON.parse(readFileSync('package.json', 'utf-8'));
 
 const binaryName = 'Cinny';
 
+const icoDir = path.resolve(__dirname, 'src/static/icons');
+const icoBase = path.resolve(icoDir, 'cinny');
+const winIcon = path.resolve(icoDir, 'cinny-256.ico');
+const linuxIcon = path.resolve(icoDir, 'cinny-512.png');
+
 const config: ForgeConfig = {
   packagerConfig: {
     executableName: binaryName,
+    icon: icoBase,
   },
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
       version: semver.parse(pkg.version)?.prerelease ? '0.0.0' : pkg.version,
+      iconUrl: 'https://gh.expo.moe/cinny-desktop/src/static/icons/cinny.ico',
+      setupIcon: winIcon,
+      skipUpdateIcon: false,
     }),
     new MakerZIP({}, ['darwin', 'linux']),
     ...(process.env.BUILD_FLATPAK
       ? [
           new MakerFlatpak({
             options: {
+              files: [],
               id: 'moe.expo.cinny',
               description:
                 'A desktop application for Cinny, shipping with a local build of it',
               genericName: 'Chat',
               productName: 'Cinny Desktop',
-              categories: ['Chat', 'Internet'],
+              categories: ['Office', 'Network', 'InstantMessaging' as any],
+              icon: linuxIcon,
             },
           }),
         ]
@@ -44,6 +55,7 @@ const config: ForgeConfig = {
     new MakerDeb({
       options: {
         bin: binaryName,
+        icon: linuxIcon,
       },
     }),
     new MakerDMG({ format: 'ULFO' }),

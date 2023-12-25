@@ -32,9 +32,9 @@ jobs:
       - name: Tar Linux Plain
         run: cd bin/linux/Cinny\ Desktop-linux-x64; tar -czvf ../../../out/linux-bin-x64.tar.gz .;
       - name: Squirrel exe
-        run: mv bin/windows/make/squirrel.windows/x64/Cinny\ Desktop-1.0.0\ Setup.exe ./out/windows-setup-x64.exe;
+        run: mv bin/windows/make/squirrel.windows/x64/Cinny\ Desktop-*\ Setup.exe ./out/windows-setup-x64.exe;
       - name: Deb
-        run: mv bin/linux/make/deb/x64/cinny-desktop_1.0.0_amd64.deb ./out/debian-x64.deb;
+        run: mv bin/linux/make/deb/x64/cinny-desktop_*_amd64.deb ./out/debian-x64.deb;
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')

@@ -9,8 +9,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        ![](https://raw.githubusercontent.com/Exponential-Workload/cinny-desktop/master/cinny-desktop-promo.png)
-
         # Cinny Desktop Suggestion Form
 
         Thanks for taking time out of your day to provide some suggestions!<br/>

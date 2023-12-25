@@ -26,7 +26,7 @@ These are built by Github.
 
 ## Build Instructions
 
-1. Clone Cinny, build it, and write the path to it's `dist` dir to `cinny-dist` in this repository.
+1. Clone Cinny, build it, and write the path to it's `dist` dir to `cinny-dist` in this repository. Make sure to update this regularly, followed by rebuilding Cinny Desktop.
 2. Run `pnpm i`
 3. Run `pnpm build`
 4. Enjoy!

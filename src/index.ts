@@ -85,6 +85,9 @@ const createWindow = (): void => {
                 'https://api.github.com/repos/Exponential-Workload/cinny-desktop/releases/latest',
               ).then(v => v.json()),
             );
+          console.log(
+            `${prefix} Found Version ${updCheckRes.name} (current is ${v})`,
+          );
           if (updCheckRes.name !== v) {
             const bw = new BrowserWindow({
               height: 400,

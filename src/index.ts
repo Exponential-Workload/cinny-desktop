@@ -85,7 +85,7 @@ const createWindow = (): void => {
   }
   const mainWindow = new BrowserWindow({
     height: 600,
-    width: 600,
+    width: 959,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
       partition,

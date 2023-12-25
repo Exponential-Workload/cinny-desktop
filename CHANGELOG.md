@@ -1,5 +1,37 @@
 # Changelog
 
+## v1.0.2
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.1...v1.0.2)
+
+### 🚀 Enhancements
+
+- Issue templates ([5d074ac](https://github.com/Exponential-Workload/cinny-desktop/commit/5d074ac))
+- Bug form ([d889101](https://github.com/Exponential-Workload/cinny-desktop/commit/d889101))
+- Feature req ([d367e61](https://github.com/Exponential-Workload/cinny-desktop/commit/d367e61))
+- New feature request form ([adec89a](https://github.com/Exponential-Workload/cinny-desktop/commit/adec89a))
+- New checkbox for bug ([ec1a02b](https://github.com/Exponential-Workload/cinny-desktop/commit/ec1a02b))
+- Also output a linux zip for those few ppl who dont use tar.gz's ([b8ce108](https://github.com/Exponential-Workload/cinny-desktop/commit/b8ce108))
+
+### 🩹 Fixes
+
+- Remove md files ([a7d3883](https://github.com/Exponential-Workload/cinny-desktop/commit/a7d3883))
+- Add config ([8d5ee8d](https://github.com/Exponential-Workload/cinny-desktop/commit/8d5ee8d))
+- Rephrase ([2791c38](https://github.com/Exponential-Workload/cinny-desktop/commit/2791c38))
+- The images kinda look silly here ([59ebe9a](https://github.com/Exponential-Workload/cinny-desktop/commit/59ebe9a))
+
+### 🏡 Chore
+
+- Update ([48c907a](https://github.com/Exponential-Workload/cinny-desktop/commit/48c907a))
+- Fix some stuff ([b292534](https://github.com/Exponential-Workload/cinny-desktop/commit/b292534))
+- Improve the md ([eb91aa0](https://github.com/Exponential-Workload/cinny-desktop/commit/eb91aa0))
+- Reword ([b5b575b](https://github.com/Exponential-Workload/cinny-desktop/commit/b5b575b))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+- ExponentialWorkload
+
 ## v1.0.1
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0...v1.0.1)

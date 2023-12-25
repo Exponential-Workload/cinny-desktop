@@ -33,24 +33,25 @@ const prefix = `${chalk.grey('[')}${chalk.green(`Cinny Host ${v}`)}${chalk.grey(
   ']',
 )}`;
 
+const priv = [
+  {
+    scheme: 'cinny',
+    privileges: {
+      bypassCSP: true,
+      secure: true,
+      standard: true,
+      supportFetchAPI: true,
+    },
+  },
+];
+protocol.registerSchemesAsPrivileged(priv);
+
 const createWindow = (): void => {
   // Create the browser window.
   const partition = 'persist:app';
   const session = sessionImport.fromPartition(partition);
-  const priv = [
-    {
-      scheme: 'cinny',
-      privileges: {
-        bypassCSP: true,
-        secure: true,
-        standard: true,
-        supportFetchAPI: true,
-      },
-    },
-  ];
   if (session.protocol.registerSchemesAsPrivileged)
     session.protocol.registerSchemesAsPrivileged(priv);
-  protocol.registerSchemesAsPrivileged(priv);
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 600,

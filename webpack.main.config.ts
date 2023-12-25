@@ -29,6 +29,11 @@ export const mainConfig: Configuration = {
           to: path.resolve(__dirname, '.webpack/main/static'),
           context: 'src/static/',
         }, // if u wanna serve static content from a new folder "src/app"
+        {
+          from: path.resolve(__dirname, 'package.json'),
+          to: path.resolve(__dirname, '.webpack/main/package.json'),
+          context: '.',
+        }, // if u wanna serve static content from a new folder "src/app"
       ],
     }),
   ],

@@ -1,0 +1,73 @@
+<!-- loaded during port scan & electron startup - should be single self-contained file -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update</title>
+    <style>
+      @import url(https://fonts.nexus/css2?family=Inter);
+
+      body {
+        font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #181818;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: 350;
+        margin: 0;
+      }
+
+      .btns {
+        margin-top: 5px;
+      }
+
+      a.active {
+        background: #008cff;
+        color: #1a1a1a;
+      }
+      a {
+        color: #008cff;
+        background: #0000;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+          'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+          'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px;
+        border: 1.2px solid #fff3;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Update Found!</h2>
+    <p>Cinny Desktop has an Update!</p>
+    <div class="btns">
+      <a
+        href="https://github.com/Exponential-Workload/cinny-desktop/releases/latest"
+        target="_blank"
+        class="active"
+        onclick="setTimeout(exit,10)"
+        >Download Update</a
+      >
+      <a href="javascript:exit()">Ignore</a>
+    </div>
+  </body>
+</html>

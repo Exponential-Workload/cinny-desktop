@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.0.0-2
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0-1...v1.0.0-2)
+
+### 🩹 Fixes
+
+- We usin cinny:// ([23eb6a6](https://github.com/Exponential-Workload/cinny-desktop/commit/23eb6a6))
+- Prereleases should be 0.0.0 on windows ([5e13a8b](https://github.com/Exponential-Workload/cinny-desktop/commit/5e13a8b))
+- Fix privelege api usage ([1bc373f](https://github.com/Exponential-Workload/cinny-desktop/commit/1bc373f))
+- Fix privelege calls ([937e428](https://github.com/Exponential-Workload/cinny-desktop/commit/937e428))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.0-1
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.2.0...v1.0.0-1)

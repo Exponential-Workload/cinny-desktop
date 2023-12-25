@@ -30,20 +30,23 @@ jobs:
           path: ./bin/windows
       - name: Make output dir
         run: mkdir out
-      - name: Zip Windows Plain
-        run: cd bin/windows/Cinny\ Desktop-win32-x64; zip -r ../../../out/windows-bin-x64.zip .;
       - name: Tar Linux Plain
         run: cd bin/linux/Cinny\ Desktop-linux-x64; tar -czvf ../../../out/linux-bin-x64.tar.gz .;
-      - name: Squirrel exe
-        run: mv bin/windows/make/squirrel.windows/x64/Cinny\ Desktop-*\ Setup.exe ./out/windows-setup-x64.exe;
+      - name: Zip Linux Plain
+        run: mv bin/linux/make/zip/linux/x64/Cinny\ Desktop-linux-x64-*.zip ./out/linux-bin-x64.zip;
       - name: Deb
         run: mv bin/linux/make/deb/x64/cinny-desktop_*_amd64.deb ./out/debian-x64.deb;
+      - name: Zip Windows Plain
+        run: cd bin/windows/Cinny\ Desktop-win32-x64; zip -r ../../../out/windows-bin-x64.zip .;
+      - name: Squirrel exe
+        run: mv bin/windows/make/squirrel.windows/x64/Cinny\ Desktop-*\ Setup.exe ./out/windows-setup-x64.exe;
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            out/windows-bin-x64.zip
             out/linux-bin-x64.tar.gz
-            out/windows-setup-x64.exe
+            out/linux-bin-x64.zip
             out/debian-x64.deb
+            out/windows-bin-x64.zip
+            out/windows-setup-x64.exe

@@ -24,7 +24,6 @@ const winIcon = path.resolve(icoDir, 'cinny-256.ico');
 const linuxIcon = path.resolve(icoDir, 'cinny-512.png');
 
 const config: ForgeConfig = {
-  buildIdentifier: isPrerelease ? 'prerelease' : 'release',
   packagerConfig: {
     executableName: binaryName,
     icon: icoBase,

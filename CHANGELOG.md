@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v1.0.0-0
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.2.0...v1.0.0-0)
+
 ## v0.2.0
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.1.0...v0.2.0)

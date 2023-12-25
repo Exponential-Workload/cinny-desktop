@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Plain Bug report
+about: A more free-form bug report form
 title: "[BUG]"
 labels: bug
 assignees: ''

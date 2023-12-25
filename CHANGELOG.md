@@ -6,7 +6,7 @@
 
 ### 🏡 Chore
 
-- Upgrade ([ddc3447](https://github.com/Exponential-Workload/cinny-desktop/commit/ddc3447))
+- Upgrade Deps ([ddc3447](https://github.com/Exponential-Workload/cinny-desktop/commit/ddc3447))
 
 ### ❤️ Contributors
 

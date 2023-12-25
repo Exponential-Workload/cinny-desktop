@@ -1,4 +1,12 @@
-import { app, BrowserWindow, ipcMain, shell } from 'electron';
+import {
+  app,
+  BrowserWindow,
+  ipcMain,
+  shell,
+  protocol,
+  net,
+  session as sessionImport,
+} from 'electron';
 // @ts-ignore
 import randomport from 'random-port';
 import chalk from 'chalk';
@@ -27,11 +35,15 @@ const prefix = `${chalk.grey('[')}${chalk.green(`Cinny Host ${v}`)}${chalk.grey(
 
 const createWindow = (): void => {
   // Create the browser window.
+  const partition = 'persist:app';
+  const session = sessionImport.fromPartition(partition);
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 600,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+      partition,
+      session,
     },
     icon: path.resolve(__dirname, 'static', 'favicon.png'),
     darkTheme: true,
@@ -70,7 +82,23 @@ const createWindow = (): void => {
           `${prefix} Listening on http://127.0.0.1:%d/ - Loading page`,
           p,
         );
-        mainWindow.loadURL(`http://127.0.0.1:${p}/`);
+        session.protocol.handle('cinny', request =>
+          net.fetch(
+            `http://127.0.0.1:${p}/${request.url.slice('cinny://app/'.length)}`,
+          ),
+        );
+        session.protocol.registerSchemesAsPrivileged([
+          {
+            scheme: 'cinny',
+            privileges: {
+              bypassCSP: true,
+              secure: true,
+              standard: true,
+              supportFetchAPI: true,
+            },
+          },
+        ]);
+        mainWindow.loadURL(`cinny://app/`);
         (async () => {
           console.log(`${prefix} Checking for updates...`);
           const updCheckRes = z
@@ -97,6 +125,8 @@ const createWindow = (): void => {
               width: 400,
               webPreferences: {
                 preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+                session,
+                partition,
               },
               icon: path.resolve(__dirname, 'static', 'favicon.png'),
               darkTheme: true,
@@ -112,7 +142,7 @@ const createWindow = (): void => {
             bw.setMenuBarVisibility(false);
             registerOpenHandler(bw);
             await bw.loadURL(
-              `http://127.0.0.1:${p}/update-notif?old=${encodeURIComponent(
+              `cinny://app/update-notif?old=${encodeURIComponent(
                 currentSemver.version,
               )}&new=${encodeURIComponent(newSemver.version)}`,
             );

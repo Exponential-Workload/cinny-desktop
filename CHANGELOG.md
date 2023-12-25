@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.6
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.5...v1.0.6)
+
+### 🩹 Fixes
+
+- App id ([5193302](https://github.com/Exponential-Workload/cinny-desktop/commit/5193302))
+- Get rid of buildidentifier ([3847e9b](https://github.com/Exponential-Workload/cinny-desktop/commit/3847e9b))
+- Fully qualify main path ([06bb40e](https://github.com/Exponential-Workload/cinny-desktop/commit/06bb40e))
+- Wm class as cinny desktop ([fa1f3e4](https://github.com/Exponential-Workload/cinny-desktop/commit/fa1f3e4))
+
+### 🏡 Chore
+
+- Call .setName ([e4bece2](https://github.com/Exponential-Workload/cinny-desktop/commit/e4bece2))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.5
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.4...v1.0.5)

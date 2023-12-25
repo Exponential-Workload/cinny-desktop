@@ -31,6 +31,9 @@ devDependencies:
   '@electron-forge/cli':
     specifier: ^7.2.0
     version: 7.2.0
+  '@electron-forge/core':
+    specifier: ^7.2.0
+    version: 7.2.0
   '@electron-forge/maker-deb':
     specifier: ^7.2.0
     version: 7.2.0

@@ -68,7 +68,7 @@ if (
         `${home}/.local/share/applications/cinny.desktop`,
         `[Desktop Entry]
 Version=1.0
-Name=Cinny
+Name=Cinny Desktop
 Comment=A Matrix Client
 GenericName=Messenger
 Type=Application
@@ -88,6 +88,7 @@ Exec=${JSON.stringify(app.getPath('exe'))} %u
         __dirname + '/static/icons/cinny-512.png',
         path.join(locolorApp, 'moe.expo.cinny.png'),
       );
+      console.log(prefix, 'Setup .desktop file successfully!');
       break;
     }
 
@@ -120,6 +121,7 @@ const createWindow = (): void => {
   } catch (error) {
     console.warn(prefix, 'Got error while trying to privelege schema', error);
   }
+  const faviconPath = path.resolve(__dirname, 'static', 'favicon.png');
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 959,
@@ -128,7 +130,7 @@ const createWindow = (): void => {
       partition,
       session,
     },
-    icon: path.resolve(__dirname, 'static', 'favicon.png'),
+    icon: faviconPath,
     darkTheme: true,
     minHeight: 400,
     minWidth: 400,
@@ -140,6 +142,15 @@ const createWindow = (): void => {
     // transparent: true,
     // frame: false,
   });
+  // load the loading page
+  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+  // config the window
+  try {
+    mainWindow.setAppDetails({
+      appId: 'moe.expo.cinny',
+      appIconPath: `${faviconPath}`,
+    });
+  } catch (error) {}
   // make new tabs open in user browser
   const registerOpenHandler = (window: BrowserWindow) =>
     window.webContents.setWindowOpenHandler(h => {
@@ -150,8 +161,6 @@ const createWindow = (): void => {
     });
   registerOpenHandler(mainWindow);
   mainWindow.setMenuBarVisibility(false);
-  // load the app
-  mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
   console.log(`${prefix} Searching for port & binding to it...`);
   const expressApp = createApp();
   randomport(
@@ -200,7 +209,7 @@ const createWindow = (): void => {
                 session,
                 partition,
               },
-              icon: path.resolve(__dirname, 'static', 'favicon.png'),
+              icon: faviconPath,
               darkTheme: true,
               minHeight: 400,
               minWidth: 400,

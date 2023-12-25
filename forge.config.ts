@@ -16,6 +16,7 @@ import path from 'path';
 const pkg = JSON.parse(readFileSync('package.json', 'utf-8'));
 
 const binaryName = 'Cinny';
+const isPrerelease = (semver.parse(pkg.version)?.prerelease?.length ?? 0) !== 0;
 
 const icoDir = path.resolve(__dirname, 'src/static/icons');
 const icoBase = path.resolve(icoDir, 'cinny');
@@ -23,14 +24,17 @@ const winIcon = path.resolve(icoDir, 'cinny-256.ico');
 const linuxIcon = path.resolve(icoDir, 'cinny-512.png');
 
 const config: ForgeConfig = {
+  buildIdentifier: isPrerelease ? 'prerelease' : 'release',
   packagerConfig: {
     executableName: binaryName,
     icon: icoBase,
+    appBundleId: `moe.expo.cinny${isPrerelease ? '.pre' : ''}`,
+    asar: !isPrerelease,
   },
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
-      version: semver.parse(pkg.version)?.prerelease ? '0.0.0' : pkg.version,
+      version: isPrerelease ? '0.0.0' : pkg.version,
       iconUrl: 'https://gh.expo.moe/cinny-desktop/src/static/icons/cinny.ico',
       setupIcon: winIcon,
       skipUpdateIcon: false,

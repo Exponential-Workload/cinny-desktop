@@ -52,6 +52,9 @@ devDependencies:
   '@electron-forge/plugin-webpack':
     specifier: ^7.2.0
     version: 7.2.0
+  '@electron-forge/shared-types':
+    specifier: ^7.2.0
+    version: 7.2.0
   '@types/express':
     specifier: ^4.17.21
     version: 4.17.21

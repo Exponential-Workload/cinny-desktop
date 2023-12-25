@@ -11,9 +11,9 @@ body:
       value: |
         ![](https://raw.githubusercontent.com/Exponential-Workload/cinny-desktop/master/cinny-desktop-promo.png)
 
-        # Cinny Desktop Bug Report Form
+        # Cinny Desktop Suggestion Form
 
-        Thanks for taking time to provide your suggestions!<br/>
+        Thanks for taking time out of your day to provide some suggestions!<br/>
         Please make sure to thouroughly read & answer all questions, to ensure it has the highest chance of getting implemented.
   - type: textarea
     id: problem

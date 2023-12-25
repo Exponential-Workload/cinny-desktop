@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.0-3
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0-2...v1.0.0-3)
+
+### 🏡 Chore
+
+- Trycatch the privelege escalation ([5d2c0ce](https://github.com/Exponential-Workload/cinny-desktop/commit/5d2c0ce))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.0-2
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.0-1...v1.0.0-2)

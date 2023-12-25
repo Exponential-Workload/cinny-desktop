@@ -79,11 +79,13 @@ Categories=Network;InstantMessaging;Chat;IRCClient
 Exec=${JSON.stringify(app.getPath('exe'))} %u
 `,
       );
-      const locolorApp = path.join(
-        home,
-        `.local/share/icons/locolor/512x512/apps`,
-      );
+      const icons = path.join(home, `.local/share/icons`);
+      const locolorApp = path.join(icons, `locolor/512x512/apps`);
       execSync(`mkdir -p ${JSON.stringify(locolorApp)}`);
+      copyFileSync(
+        __dirname + '/static/icons/cinny-512.png',
+        path.join(icons, 'moe.expo.cinny.png'),
+      );
       copyFileSync(
         __dirname + '/static/icons/cinny-512.png',
         path.join(locolorApp, 'moe.expo.cinny.png'),

@@ -72,27 +72,27 @@ jobs:
         with:
           path: out
           name: build-binbows
-  build-marcos:
-    runs-on: macos-latest
-    needs: [build-cinny]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Download Cinny
-        uses: actions/download-artifact@v3
-        with:
-          name: cinny-build
-          path: ./.cinny
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-      - name: Install dependencies
-        run: pnpm i
-      - name: Build project
-        run: pnpm build
-      - name: Deploy
-        uses: actions/upload-artifact@v3
-        with:
-          path: out
-          name: build-sackos
+  # build-marcos:
+  #   runs-on: macos-latest
+  #   needs: [build-cinny]
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #     - name: Download Cinny
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: cinny-build
+  #         path: ./.cinny
+  #     - name: Install pnpm
+  #       uses: pnpm/action-setup@v2
+  #       with:
+  #         version: latest
+  #     - name: Install dependencies
+  #       run: pnpm i
+  #     - name: Build project
+  #       run: pnpm build
+  #     - name: Deploy
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         path: out
+  #         name: build-sackos

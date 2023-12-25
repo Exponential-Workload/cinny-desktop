@@ -80,33 +80,34 @@ jobs:
         with:
           path: out
           name: build-binbows
-  build-marcos:
-    runs-on: macos-latest
-    needs: [build-cinny]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Download Cinny
-        uses: actions/download-artifact@v3
-        with:
-          name: cinny-build
-          path: ./.cinny
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-      - name: Install dependencies
-        run: pnpm i
-      - name: Build project
-        run: pnpm build
-      - name: Deploy
-        uses: actions/upload-artifact@v3
-        with:
-          path: out
-          name: build-sackos
+  # build-marcos:
+  #   runs-on: macos-latest
+  #   needs: [build-cinny]
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #     - name: Download Cinny
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: cinny-build
+  #         path: ./.cinny
+  #     - name: Install pnpm
+  #       uses: pnpm/action-setup@v2
+  #       with:
+  #         version: latest
+  #     - name: Install dependencies
+  #       run: pnpm i
+  #     - name: Build project
+  #       run: pnpm build
+  #     - name: Deploy
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         path: out
+  #         name: build-sackos
   deploy:
     runs-on: ubuntu-latest
-    needs: [build-ubunut, build-marcos, build-wombat]
+    # needs: [build-ubunut, build-marcos, build-wombat]
+    needs: [build-ubunut, build-wombat]
     if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout code
@@ -121,15 +122,19 @@ jobs:
         with:
           name: build-binbows
           path: ./_site/window
-      - name: Download Sacking the OS
-        uses: actions/download-artifact@v3
-        with:
-          name: build-sackos
-          path: ./_site/mack
+      # - name: Download Sacking the OS
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: build-sackos
+      #     path: ./_site/mack
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: '.'
+      - name: Create Indexes
+        uses: Exponential-Workload/create-index-action@master
+        with:
+          dir: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

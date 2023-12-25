@@ -146,6 +146,9 @@ app.on('ready', () => {
   ipcMain.handle('close-window', (event, name?: string) => {
     event.sender.close();
   });
+  ipcMain.handle('close-app', (event, name?: string) => {
+    app.quit();
+  });
 });
 
 app.on('activate', () => {
@@ -154,6 +157,10 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
+});
+
+process.on('exit', () => {
+  app.quit();
 });
 
 // In this file you can include the rest of your app's specific main process

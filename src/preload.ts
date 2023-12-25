@@ -9,3 +9,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
 contextBridge.exposeInMainWorld('exit', () =>
   ipcRenderer.invoke('close-window'),
 );
+contextBridge.exposeInMainWorld('byebye', () =>
+  ipcRenderer.invoke('close-app'),
+);

@@ -83,8 +83,10 @@ body:
   - type: checkboxes
     id: terms
     attributes:
-      label: Update
+      label: Confirmations
       description: "By submitting this issue, you've checked that you cannot reproduce this issue on Cinny Web, on it's master branch - and can only reproduce it within cinny desktop."
       options:
         - label: "I've checked that I cannot reproduce this bug on Cinny's latest `master` commit with a standard browser."
+          required: true
+        - label: "I've checked that all of the above information is accurate."
           required: true

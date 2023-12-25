@@ -45,7 +45,7 @@ body:
   - type: checkboxes
     id: terms
     attributes:
-      label: Update
+      label: Confirmations
       description: "By submitting this issue, you've checked this is an improvement for Cinny Desktop, and not Cinny overall. Overall Ciny suggestions can be submitted in the relevant project."
       options:
         - label: "I've checked that this is the right repository for this."

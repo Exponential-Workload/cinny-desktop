@@ -4,8 +4,6 @@
 
 # Cinny Desktop
 
-[![Deploy Master Branch](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/deploy.yml/badge.svg)](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/deploy.yml) [![Deploy Latest Release](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/release-files.yml/badge.svg)](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/release-files.yml)
-
 Unofficial Desktop application for [Cinny](https://cinny.in/) (a browser-based [Matrix](https://matrix.org) client) - utilizing a local build of Cinny.
 
 </div>

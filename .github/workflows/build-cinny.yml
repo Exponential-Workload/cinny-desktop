@@ -7,6 +7,8 @@ jobs:
   build-cinny:
     runs-on: ubuntu-latest
     steps:
+      - name: Clone Cinny
+        run: git clone https://github.com/cinnyapp/cinny.git .
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -16,8 +18,6 @@ jobs:
         with:
           node-version: 'latest'
           cache: 'npm'
-      - name: Clone Cinny
-        run: git clone https://github.com/cinnyapp/cinny.git .
       - name: Install dependencies
         run: npm i
       - name: Build project

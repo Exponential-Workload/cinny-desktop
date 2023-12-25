@@ -2,7 +2,7 @@
   "name": "cinny-desktop",
   "productName": "Cinny Desktop",
   "displayName": "Cinny Desktop",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Cinny, as a desktop app",
   "main": ".webpack/main",
   "scripts": {

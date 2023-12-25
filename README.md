@@ -27,7 +27,7 @@ These are built by Github.
 
 (dev = latest master commit)
 
-<!-- ### Setting up Start Menu
+### Setting up Start Menu
 
 This step is only needed post-installation when using the binary archives.
 
@@ -39,7 +39,7 @@ TBA
 
 Simply run the executable with the `--setup-desktop` flag; open a terminal, `cd` into the folder you extracted the binary to, and run `./Cinny --setup-desktop`.
 
-Note that you should _NOT_ move the folder afterwards. The `.desktop` shortcut shown in the start menu will point to the path you specified. You can move it prior to running with `--setup-desktop` to anywhere on the system, and re-run with `--setup-desktop` if you did move it after already running it with the flag once before. -->
+Note that you should _NOT_ move the folder afterwards. The `.desktop` shortcut shown in the start menu will point to the path you specified. You can move it prior to running with `--setup-desktop` to anywhere on the system, and re-run with `--setup-desktop` if you did move it after already running it with the flag once before.
 
 ## Build Instructions
 

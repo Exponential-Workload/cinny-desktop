@@ -1,0 +1,52 @@
+name: Feature Request
+description: Request an improvement of some kind
+title: 'Feature: '
+labels: ['enhancement']
+projects: []
+assignees:
+  - Exponential-Workload
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking time to provide your suggestions!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: "If it's related to an issue, open or not, link to it here. Otherwise, if it's related to a problem, reference it here."
+      placeholder: "A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]"
+    validations:
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: 'What should we do about it?'
+      description: "Describe the solution/improvement you'd like"
+      placeholder: 'A clear and concise description of what you want to happen. Ex. We should do x instead of the above.'
+    validations:
+      required: true
+  - type: textarea
+    id: alternates
+    attributes:
+      label: 'What alternatives are there?'
+      description: "Describe alternatives you've considered"
+      placeholder: "A clear and concise description of any alternative solutions or features you've considered."
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: 'Anything Else?'
+      description: 'You can provide additional context here'
+      placeholder: 'Add any other context or screenshots about the feature request here.'
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Update
+      description: "By submitting this issue, you've checked this is an improvement for Cinny Desktop, and not Cinny overall. Overall Ciny suggestions can be submitted in the relevant project."
+      options:
+        - label: "I've checked that this is the right repository for this."
+          required: true

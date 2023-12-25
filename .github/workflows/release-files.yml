@@ -6,6 +6,9 @@ on:
     types:
       - created
 
+permissions:
+  contents: write
+
 jobs:
   build-os:
     uses: ./.github/workflows/build.yml

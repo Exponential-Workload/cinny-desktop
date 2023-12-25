@@ -27,7 +27,7 @@ jobs:
         run: pnpm i
       - name: Build project
         run: pnpm build
-      - name: Deploy
+      - name: Upload
         uses: actions/upload-artifact@v3
         with:
           path: dist
@@ -51,7 +51,7 @@ jobs:
         run: pnpm i
       - name: Build project
         run: pnpm build
-      - name: Deploy
+      - name: Upload
         uses: actions/upload-artifact@v3
         with:
           path: out
@@ -75,7 +75,7 @@ jobs:
         run: pnpm i
       - name: Build project
         run: pnpm build
-      - name: Deploy
+      - name: Upload
         uses: actions/upload-artifact@v3
         with:
           path: out

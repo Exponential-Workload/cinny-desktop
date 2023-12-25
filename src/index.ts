@@ -37,6 +37,20 @@ const createWindow = (): void => {
   // Create the browser window.
   const partition = 'persist:app';
   const session = sessionImport.fromPartition(partition);
+  const priv = [
+    {
+      scheme: 'cinny',
+      privileges: {
+        bypassCSP: true,
+        secure: true,
+        standard: true,
+        supportFetchAPI: true,
+      },
+    },
+  ];
+  if (session.protocol.registerSchemesAsPrivileged)
+    session.protocol.registerSchemesAsPrivileged(priv);
+  protocol.registerSchemesAsPrivileged(priv);
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 600,
@@ -87,17 +101,6 @@ const createWindow = (): void => {
             `http://127.0.0.1:${p}/${request.url.slice('cinny://app/'.length)}`,
           ),
         );
-        session.protocol.registerSchemesAsPrivileged([
-          {
-            scheme: 'cinny',
-            privileges: {
-              bypassCSP: true,
-              secure: true,
-              standard: true,
-              supportFetchAPI: true,
-            },
-          },
-        ]);
         mainWindow.loadURL(`cinny://app/`);
         (async () => {
           console.log(`${prefix} Checking for updates...`);

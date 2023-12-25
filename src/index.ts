@@ -63,8 +63,9 @@ if (
 } else if (process.argv.includes('--setup-desktop')) {
   switch (process.platform) {
     case 'linux': {
+      const home = app.getPath('home');
       writeFileSync(
-        `${process.env.HOME}/.local/share/applications/cinny.desktop`,
+        `${home}/.local/share/applications/cinny.desktop`,
         `[Desktop Entry]
 Version=1.0
 Name=Cinny
@@ -75,11 +76,11 @@ Terminal=false
 Icon=moe.expo.cinny
 StartupWMClass=Cinny
 Categories=Network;InstantMessaging;Chat;IRCClient
-Exec=/home/arch/.local/bin/cinny/Cinny %u
+Exec=${JSON.stringify(app.getPath('exe'))} %u
 `,
       );
       const locolorApp = path.join(
-        process.env.HOME,
+        home,
         `.local/share/icons/locolor/512x512/apps`,
       );
       execSync(`mkdir -p ${JSON.stringify(locolorApp)}`);

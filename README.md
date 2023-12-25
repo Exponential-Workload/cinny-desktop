@@ -4,6 +4,8 @@
 
 # Cinny Desktop
 
+[![Deploy Master Branch](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/deploy.yml/badge.svg)](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/deploy.yml) [![Deploy Latest Release](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/release-files.yml/badge.svg)](https://github.com/Exponential-Workload/cinny-desktop/actions/workflows/release-files.yml)
+
 Unofficial Desktop application for [Cinny](https://cinny.in/) (a browser-based [Matrix](https://matrix.org) client) - utilizing a local build of Cinny.
 
 </div>
@@ -18,11 +20,14 @@ They get no information other than that you opened it.
 
 These are built by Github.
 
-- [Linux Binary Archive](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-bin-x64.tar.gz)
-- [Debian Package](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/debian-x64.deb)
+- [Linux Binary Archive (.tar.gz)](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-bin-x64.tar.gz)
+- [Linux Binary Archive (.zip)](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-bin-x64.zip) ([dev](https://gh.expo.moe/cinny-desktop/_build/ubunut/make/zip/linux/x64/))
+- [Debian Package](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/debian-x64.deb) ([dev](https://gh.expo.moe/cinny-desktop/_build/ubunut/make/deb/x64/))
 - Flatpak (soon - if someone can help me troubleshoot the electron-forge flatpak builder, it'd be greatly appreciated - [contact me](https://matrix.to/#/@3xpo:matrix.org))
 - [Windows Binary Archive](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/windows-bin-x64.zip)
-- [Windows Installer](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/windows-setup-x64.exe)
+- [Windows Installer](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/windows-setup-x64.exe) ([dev](https://gh.expo.moe/cinny-desktop/_build/window/make/squirrel.windows/x64/))
+
+(dev = latest master commit)
 
 ## Build Instructions
 

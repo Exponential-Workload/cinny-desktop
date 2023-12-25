@@ -31,7 +31,7 @@ jobs:
           pnpm i
           sudo apt install -y flatpak flatpak-builder elfutils
       - name: Build project
-        run: BUILD_FLATPAK=true pnpm build
+        run: pnpm build
       - name: Upload
         uses: actions/upload-artifact@v3
         with:

@@ -20,16 +20,20 @@ const config: ForgeConfig = {
   makers: [
     new MakerSquirrel({}),
     new MakerZIP({}, ['darwin', 'linux']),
-    // new MakerFlatpak({
-    //   options: {
-    //     id: 'moe.expo.cinny',
-    //     description:
-    //       'A desktop application for Cinny, shipping with a local build of it',
-    //     genericName: 'Chat',
-    //     productName: 'Cinny Desktop',
-    //     categories: ['Chat', 'Internet'],
-    //   },
-    // }),
+    ...(process.env.BUILD_FLATPAK
+      ? [
+          new MakerFlatpak({
+            options: {
+              id: 'moe.expo.cinny',
+              description:
+                'A desktop application for Cinny, shipping with a local build of it',
+              genericName: 'Chat',
+              productName: 'Cinny Desktop',
+              categories: ['Chat', 'Internet'],
+            },
+          }),
+        ]
+      : []),
     new MakerDeb({
       options: {
         bin: binaryName,

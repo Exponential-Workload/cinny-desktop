@@ -26,4 +26,7 @@
  * ```
  */
 
-console.log('👋 Hey 👋');
+console.log('Hello from Cinny Desktop! 👋');
+console.log(
+  'Source Code: https://github.com/Exponential-Workload/cinny-desktop',
+);

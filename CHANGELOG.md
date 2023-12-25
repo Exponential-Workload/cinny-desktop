@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.1.0...v0.2.0)
+
+### 🩹 Fixes
+
+- Use asterisk for version ([6d45823](https://github.com/Exponential-Workload/cinny-desktop/commit/6d45823))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v0.1.0
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/0.0.0...v0.1.0)

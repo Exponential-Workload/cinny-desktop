@@ -1,37 +1,13 @@
 name: Build
 on:
   push:
-    branches:
-      - master
+  pull_request:
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
+  workflow_call:
 
 jobs:
   build-cinny:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-      - name: Clone Cinny
-        run: git clone https://github.com/cinnyapp/cinny.git .
-      - name: Install dependencies
-        run: pnpm i
-      - name: Build project
-        run: pnpm build
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          path: dist
-          name: cinny-build
+    uses: ./.github/workflows/build-cinny.yml
   build-ubunut:
     runs-on: ubuntu-latest
     needs: [build-cinny]
@@ -99,42 +75,8 @@ jobs:
   #       run: pnpm i
   #     - name: Build project
   #       run: pnpm build
-  #     - name: Deploy
+  #     - name: Upload
   #       uses: actions/upload-artifact@v3
   #       with:
   #         path: out
   #         name: build-sackos
-  deploy:
-    runs-on: ubuntu-latest
-    # needs: [build-ubunut, build-marcos, build-wombat]
-    needs: [build-ubunut, build-wombat]
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Download Ubunut
-        uses: actions/download-artifact@v3
-        with:
-          name: build-ubunut
-          path: ./_site/ubunut
-      - name: Download Michaelsoft Binbows
-        uses: actions/download-artifact@v3
-        with:
-          name: build-binbows
-          path: ./_site/window
-      # - name: Download Sacking the OS
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: build-sackos
-      #     path: ./_site/mack
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: '.'
-      - name: Create Indexes
-        uses: Exponential-Workload/create-index-action@master
-        with:
-          dir: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1

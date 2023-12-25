@@ -1,0 +1,24 @@
+name: Build Cinny
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build-cinny:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - name: Clone Cinny
+        run: git clone https://github.com/cinnyapp/cinny.git .
+      - name: Install dependencies
+        run: pnpm i
+      - name: Build project
+        run: pnpm build
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          path: dist
+          name: cinny-build

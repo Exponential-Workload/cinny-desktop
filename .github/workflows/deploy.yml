@@ -38,14 +38,14 @@ jobs:
       #   with:
       #     name: build-sackos
       #     path: ./_site/mack
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: '.'
       - name: Create Indexes
         uses: Exponential-Workload/create-index-action@master
         with:
           dir: '.'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

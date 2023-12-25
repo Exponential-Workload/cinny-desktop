@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.5
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.4...v1.0.5)
+
+### 🚀 Enhancements
+
+- --setup-desktop ([60a4b86](https://github.com/Exponential-Workload/cinny-desktop/commit/60a4b86))
+- Add .desktop file setup to docs ([0a598d1](https://github.com/Exponential-Workload/cinny-desktop/commit/0a598d1))
+
+### 🩹 Fixes
+
+- Use app.getpath ([8f85505](https://github.com/Exponential-Workload/cinny-desktop/commit/8f85505))
+- Id stuff ([006c819](https://github.com/Exponential-Workload/cinny-desktop/commit/006c819))
+- Copy to 2 dirs ([df00f42](https://github.com/Exponential-Workload/cinny-desktop/commit/df00f42))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.4
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.3...v1.0.4)

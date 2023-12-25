@@ -4,7 +4,7 @@
   "displayName": "Cinny Desktop",
   "version": "1.0.5",
   "description": "Cinny, as a desktop app",
-  "main": ".webpack/main/index.js",
+  "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",

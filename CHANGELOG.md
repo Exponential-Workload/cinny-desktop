@@ -1,23 +1,5 @@
 # Changelog
 
-
-## v2.0.0-0
-
-[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.2.0...v2.0.0-0)
-
-### 🩹 Fixes
-
-- Dont hard exit ([a866aaf](https://github.com/Exponential-Workload/cinny-desktop/commit/a866aaf))
-- Grant permission ([7202b18](https://github.com/Exponential-Workload/cinny-desktop/commit/7202b18))
-
-### 🏡 Chore
-
-- **release:** V1.0.0-0 ([b658550](https://github.com/Exponential-Workload/cinny-desktop/commit/b658550))
-
-### ❤️ Contributors
-
-- Exponential-Workload <cc@aaathats3as.com>
-
 ## v1.0.0-0
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v0.2.0...v1.0.0-0)
@@ -54,7 +36,7 @@
 - On ubuntu, try to build flatpaks ([d7f5a58](https://github.com/Exponential-Workload/cinny-desktop/commit/d7f5a58))
 - Call apt with sudo :rolling_eyes: ([f051370](https://github.com/Exponential-Workload/cinny-desktop/commit/f051370))
 - Log version check result ([68e08b2](https://github.com/Exponential-Workload/cinny-desktop/commit/68e08b2))
-- _build ([5e9538c](https://github.com/Exponential-Workload/cinny-desktop/commit/5e9538c))
+- \_build ([5e9538c](https://github.com/Exponential-Workload/cinny-desktop/commit/5e9538c))
 
 ### 🏡 Chore
 
@@ -64,4 +46,3 @@
 ### ❤️ Contributors
 
 - Exponential-Workload <cc@aaathats3as.com>
-

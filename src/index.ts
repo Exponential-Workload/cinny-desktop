@@ -31,7 +31,7 @@ const createWindow = (): void => {
     darkTheme: true,
     minHeight: 400,
     minWidth: 400,
-    title: 'Electron Express',
+    title: 'Cinny Desktop',
     backgroundColor: '#1a1a1a',
     hasShadow: false,
     roundedCorners: true,

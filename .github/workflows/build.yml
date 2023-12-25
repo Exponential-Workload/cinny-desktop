@@ -41,7 +41,7 @@ jobs:
       - name: Download Cinny
         uses: actions/download-artifact@v3
         with:
-          name: build-ubunut
+          name: cinny-build
           path: ./.cinny
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -65,7 +65,7 @@ jobs:
       - name: Download Cinny
         uses: actions/download-artifact@v3
         with:
-          name: build-ubunut
+          name: cinny-build
           path: ./.cinny
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -89,7 +89,7 @@ jobs:
       - name: Download Cinny
         uses: actions/download-artifact@v3
         with:
-          name: build-ubunut
+          name: cinny-build
           path: ./.cinny
       - name: Install pnpm
         uses: pnpm/action-setup@v2

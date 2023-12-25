@@ -9,7 +9,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        ![](https://raw.githubusercontent.com/Exponential-Workload/cinny-desktop/master/cinny-desktop-promo.png)
+
+        # Cinny Desktop Bug Report Form
+
+        Thanks for taking the time to fill out this bug report! Please make sure to thouroughly read & answer all questions.
   - type: textarea
     id: what-happened
     attributes:

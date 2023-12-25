@@ -9,7 +9,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking time to provide your suggestions!
+        ![](https://raw.githubusercontent.com/Exponential-Workload/cinny-desktop/master/cinny-desktop-promo.png)
+
+        # Cinny Desktop Bug Report Form
+
+        Thanks for taking time to provide your suggestions!<br/>
+        Please make sure to thouroughly read & answer all questions, to ensure it has the highest chance of getting implemented.
   - type: textarea
     id: problem
     attributes:

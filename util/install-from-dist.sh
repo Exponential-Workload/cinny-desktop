@@ -15,7 +15,8 @@ mkdir -p $CINNY_INSTALLATION;
 cd $CINNY_INSTALLATION;
 curl -fsSL -o /tmp/cinny.tar.gz https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-bin-x64.tar.gz
 tar -xzvf /tmp/cinny.tar.gz;
-chmod +x --recusrive $CINNY_INSTALLATION;
+touch $CINNY_BINARY
+chmod +x --recursive $CINNY_INSTALLATION $CINNY_BINARY;
 POSTINSTALL=true ./Cinny;
 echo '#!/usr/bin/env bash' > $CINNY_BINARY;
 echo "cd $CINNY_INSTALLATION" >> $CINNY_BINARY;

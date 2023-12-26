@@ -17,10 +17,10 @@ curl -fsSL -o /tmp/cinny.tar.gz https://github.com/Exponential-Workload/cinny-de
 tar -xzvf /tmp/cinny.tar.gz;
 touch $CINNY_BINARY
 chmod +x --recursive $CINNY_INSTALLATION $CINNY_BINARY;
-POSTINSTALL=true ./Cinny;
+POSTINSTALL=true ./Cinny --setup-desktop;
 echo '#!/usr/bin/env bash' > $CINNY_BINARY;
 echo "cd $CINNY_INSTALLATION" >> $CINNY_BINARY;
-echo 'exec ./Cinny' >> $CINNY_BINARY;
+echo 'exec ./Cinny $@;' >> $CINNY_BINARY;
 chmod +x $CINNY_BINARY;
 if [[ "$USER" != "root" ]]; then
   exec $CINNY_BINARY;

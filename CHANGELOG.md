@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.0.7
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.6...v1.0.7)
+
+### 🩹 Fixes
+
+- Proper installation ([e74692d](https://github.com/Exponential-Workload/cinny-desktop/commit/e74692d))
+- With -fsSL ([0fee7e4](https://github.com/Exponential-Workload/cinny-desktop/commit/0fee7e4))
+- Chmod the install aswell ([57e34d7](https://github.com/Exponential-Workload/cinny-desktop/commit/57e34d7))
+- Move it up ([b9f8d0c](https://github.com/Exponential-Workload/cinny-desktop/commit/b9f8d0c))
+- Fix shit ([6945a24](https://github.com/Exponential-Workload/cinny-desktop/commit/6945a24))
+- Call with setup desktop ([2dfba00](https://github.com/Exponential-Workload/cinny-desktop/commit/2dfba00))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.6
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.5...v1.0.6)

@@ -20,6 +20,7 @@ echo '#!/usr/bin/env bash' > $CINNY_BINARY;
 echo "cd $CINNY_INSTALLATION" >> $CINNY_BINARY;
 echo 'exec ./Cinny' >> $CINNY_BINARY;
 chmod +x $CINNY_BINARY;
+chmod +x --recusrive $CINNY_INSTALLATION;
 if [[ "$USER" != "root" ]]; then
   exec $CINNY_BINARY;
 fi;

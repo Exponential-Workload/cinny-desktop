@@ -19,7 +19,7 @@ jobs:
         run: sudo apt install jq -y;
       - name: Set version in Installation Script
         run: |
-          sed 's/releases\/latest\/download/releases\/download\/'$(jq .version package.json)/ util/install-from-dist.sh > util/install-from-dist-v.sh
+          sed 's/releases\/latest\/download/releases\/download\/v'$(jq .version package.json)/ util/install-from-dist.sh > util/install-from-dist-v.sh
           mv util/install-from-dist-v.sh util/install-from-dist.sh
       - name: Upload
         uses: actions/upload-artifact@v3

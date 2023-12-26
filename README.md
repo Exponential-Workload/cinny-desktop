@@ -14,7 +14,29 @@ This makes a single request to Github on start, to check for updates (so we can 
 
 They get no information other than that you opened it.
 
-## Prebuilt Binaries
+## Simple Installation
+
+These will download binaries built by & hosted on Github servers.
+
+### Linux
+
+#### Arch
+
+Run `curl -fsSL https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-install-x64.sh | sh` in a terminal. For a system-wide install, run as root.
+
+(makepkg coming sometime eventually)
+
+#### Debian
+
+Install the [Debian Package](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/debian-x64.deb) ([dev](https://gh.expo.moe/cinny-desktop/_build/ubunut/make/deb/x64/)).
+
+### Windows
+
+Use the [Windows Installer](https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/windows-setup-x64.exe).
+
+## Advanced Installation
+
+### Prebuilt Binaries
 
 These are built by Github.
 
@@ -27,21 +49,21 @@ These are built by Github.
 
 (dev = latest master commit)
 
-### Setting up Start Menu
+#### Setting up Start Menu
 
 This step is only needed post-installation when using the binary archives.
 
-#### Windows
+##### Windows
 
 TBA
 
-#### Linux
+##### Linux
 
 Simply run the executable with the `--setup-desktop` flag; open a terminal, `cd` into the folder you extracted the binary to, and run `./Cinny --setup-desktop`.
 
 Note that you should _NOT_ move the folder afterwards. The `.desktop` shortcut shown in the start menu will point to the path you specified. You can move it prior to running with `--setup-desktop` to anywhere on the system, and re-run with `--setup-desktop` if you did move it after already running it with the flag once before.
 
-## Build Instructions
+### Build Instructions
 
 1. Clone Cinny, build it, and write the path to it's `dist` dir to `cinny-dist` in this repository. Make sure to update this regularly, followed by rebuilding Cinny Desktop.
 2. Run `pnpm i`

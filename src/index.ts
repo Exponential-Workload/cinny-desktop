@@ -67,8 +67,12 @@ if (
   switch (process.platform) {
     case 'linux': {
       const home = app.getPath('home');
+      const localShare =
+        process.env.LOCAL_SHARE ?? process.env.USER === 'root'
+          ? '/usr/share'
+          : path.join(home, '.local/share');
       writeFileSync(
-        `${home}/.local/share/applications/cinny.desktop`,
+        path.join(localShare, 'applications/cinny.desktop'),
         `[Desktop Entry]
 Version=1.0
 Name=Cinny Desktop
@@ -82,7 +86,7 @@ Categories=Network;InstantMessaging;Chat;IRCClient
 Exec=${JSON.stringify(app.getPath('exe'))} %u
 `,
       );
-      const icons = path.join(home, `.local/share/icons`);
+      const icons = path.join(localShare, `icons`);
       const locolorApp = path.join(icons, `locolor/512x512/apps`);
       execSync(`mkdir -p ${JSON.stringify(locolorApp)}`);
       copyFileSync(
@@ -117,6 +121,7 @@ const priv = [
 protocol.registerSchemesAsPrivileged(priv);
 
 const createWindow = (): void => {
+  if (process.env.USER === 'root' || process.env.POSTINSTALL) process.exit(0);
   // Create the browser window.
   const partition = 'persist:app';
   const session = sessionImport.fromPartition(partition);

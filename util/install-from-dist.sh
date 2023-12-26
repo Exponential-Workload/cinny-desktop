@@ -13,7 +13,7 @@ set -e;
 
 mkdir -p $CINNY_INSTALLATION;
 cd $CINNY_INSTALLATION;
-curl -o /tmp/cinny.tar.gz https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-bin-x64.tar.gz
+curl -fsSL -o /tmp/cinny.tar.gz https://github.com/Exponential-Workload/cinny-desktop/releases/latest/download/linux-bin-x64.tar.gz
 tar -xzvf /tmp/cinny.tar.gz;
 POSTINSTALL=true ./Cinny;
 echo '#!/usr/bin/env bash' > $CINNY_BINARY;

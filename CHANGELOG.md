@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.8
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.7...v1.0.8)
+
+### 🩹 Fixes
+
+- Prefix with v ([128307b](https://github.com/Exponential-Workload/cinny-desktop/commit/128307b))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+
 ## v1.0.7
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.6...v1.0.7)

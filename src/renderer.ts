@@ -157,7 +157,7 @@ export default async () => {
       lastContainer = null
       return
     }
-    let performedAction = false;
+    let performedAction = true;
     if (lastContainer) {
       switch (k.key) {
         case 's':

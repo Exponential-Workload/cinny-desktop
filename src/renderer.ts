@@ -49,6 +49,25 @@ export default async () => {
         opt.post(el)
       return el;
     }
+    const selectionStyles = (idx = conf.apps.length) => ({
+      gap: '8px',
+      display: 'flex',
+      'align-items': 'center',
+      'justify-content': 'center',
+      'flex-direction': 'row',
+      'text-align': 'center',
+      'font-size': '1.4rem',
+      'padding': '10px',
+      'border-radius': '12px',
+      'background': '#5554',
+      'border': '1.2px solid',
+      'border-color': '#fff4',
+      'cursor': 'default',
+      ...(selectIdx === idx ? {
+        'background': '#5557',
+        'border-color': '#fff7',
+      } : {})
+    })
     lastContainer = create('div', {
       styles: {
         position: 'fixed',
@@ -65,16 +84,26 @@ export default async () => {
         width: '100vw',
         height: '100vh',
         'z-index': '8192',
+        'gap': '8px',
+        'cursor': 'default',
       },
       parent: document.body,
       children: [
+        create('span', {
+          textContent: 'Select a User',
+          styles: {
+            'font-size': '1.6rem',
+            'padding-bottom': '8px',
+            'display': 'block',
+          }
+        }),
         ...conf.apps.map((v, i) => create('div', {
           children: [
             create('img', {
               styles: {
                 height: '1.2em',
                 width: '1.2em',
-                'border-radius': '12px',
+                'border-radius': '8px',
               },
               post(img) {
                 img.src = v.pfp
@@ -84,20 +113,7 @@ export default async () => {
               textContent: v.userid
             }),
           ],
-          styles: {
-            gap: '8px',
-            display: 'flex',
-            'align-items': 'center',
-            'justify-content': 'center',
-            'flex-direction': 'row',
-            'text-align': 'center',
-            'font-size': '1.4rem',
-            'padding': '10px',
-            'border-radius': '12px',
-            ...(i === selectIdx ? {
-              'background': '#777a',
-            } : {})
-          }
+          styles: selectionStyles(i)
         })),
         create('div', {
           children: [
@@ -105,21 +121,30 @@ export default async () => {
               textContent: 'New Account'
             })
           ],
+          styles: selectionStyles()
+        }),
+        create('span', {
+          textContent: 'Esc/Ctrl+Tab = Close',
           styles: {
-            gap: '8px',
-            display: 'flex',
-            'align-items': 'center',
-            'justify-content': 'center',
-            'flex-direction': 'row',
-            'text-align': 'center',
-            'font-size': '1.4rem',
-            'padding': '10px',
-            'border-radius': '12px',
-            ...(selectIdx === conf.apps.length ? {
-              'background': '#777a',
-            } : {})
+            'font-size': '0.9rem',
+            'padding-top': '24px',
+            'display': 'block',
           }
-        })
+        }),
+        create('span', {
+          textContent: 'Up/Down = Navigate',
+          styles: {
+            'font-size': '0.9rem',
+            'display': 'block',
+          }
+        }),
+        create('span', {
+          textContent: 'Enter/Return = Select',
+          styles: {
+            'font-size': '0.9rem',
+            'display': 'block',
+          }
+        }),
       ],
     })
   }
@@ -132,13 +157,17 @@ export default async () => {
       lastContainer = null
       return
     }
+    let performedAction = false;
     if (lastContainer) {
-      let actionTaken = true;
       switch (k.key) {
+        case 's':
+        case 'S':
         case 'ArrowDown':
           if (++selectIdx > conf.apps.length)
             selectIdx = 0;
           break;
+        case 'w':
+        case 'W':
         case 'ArrowUp':
           if (--selectIdx < 0)
             selectIdx = conf.apps.length;
@@ -153,23 +182,23 @@ export default async () => {
             const target = `app${app.id === null ? '' : `-${app.id}`}`
             location.replace(`cinny://${target}/`)
           }
+          break;
         }
 
         default:
-          actionTaken = false;
+          performedAction = false;
           break;
       }
-      if (actionTaken) {
-        k.preventDefault();
-        k.stopPropagation();
-      }
     }
-    if (ctrlTab || (lastContainer && (k.key === 'ArrowUp' || k.key === 'ArrowDown'))) {
+    if (ctrlTab || performedAction) {
       k.preventDefault();
       k.stopPropagation();
       if (!lastContainer)
         conf = await cfg();
       redraw();
+    } else if (lastContainer) {
+      k.preventDefault();
+      k.stopPropagation();
     }
   }
   document.body.addEventListener('keydown', listener)

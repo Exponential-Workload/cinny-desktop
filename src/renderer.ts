@@ -65,7 +65,7 @@ export default async () => {
       'cursor': 'default',
       ...(selectIdx === idx ? {
         'background': '#5557',
-        'border-color': '#fff7',
+        'border-color': '#23D18B88',
       } : {})
     })
     lastContainer = create('div', {
@@ -190,7 +190,7 @@ export default async () => {
           break;
       }
     }
-    if (ctrlTab || performedAction) {
+    if (ctrlTab || (performedAction && lastContainer)) {
       k.preventDefault();
       k.stopPropagation();
       if (!lastContainer)

@@ -55,5 +55,13 @@
   },
   "build": {
     "appId": "moe.expo.cinny"
+  },
+  "overrides": {
+    "flora-colossus": "@xp0/flora-colossus@latest"
+  },
+  "pnpm": {
+    "overrides": {
+      "flora-colossus": "npm:@xp0/flora-colossus@latest"
+    }
   }
 }

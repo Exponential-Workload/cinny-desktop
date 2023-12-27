@@ -6,6 +6,8 @@
 
 Unofficial Desktop application for [Cinny](https://cinny.in/) (a browser-based [Matrix](https://matrix.org) client) - utilizing a local build of Cinny.
 
+Supports account-switching, via ctrl+tab. This is done via an injected script & abuses Electron Protocols & localStorage context partitioning.
+
 </div>
 
 ## Notice

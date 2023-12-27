@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.9
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.8...v1.0.9)
+
+### 🚀 Enhancements
+
+- Account Switching
+
 ## v1.0.8
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.7...v1.0.8)

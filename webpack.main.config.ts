@@ -14,6 +14,17 @@ export const mainConfig: Configuration = {
     rules,
   },
   resolve: {
+    fallback: {
+      fs: false,
+      tls: false,
+      net: false,
+      path: false,
+      zlib: false,
+      http: false,
+      https: false,
+      stream: false,
+      crypto: false,
+    },
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
   },
   plugins: [

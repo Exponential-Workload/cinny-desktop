@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  flora-colossus: npm:@xp0/flora-colossus@latest
+
 dependencies:
   chalk:
     specifier: ^5.3.0
@@ -1207,6 +1210,16 @@ packages:
   /@xmldom/xmldom@0.8.10:
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
+    dev: true
+
+  /@xp0/flora-colossus@2.1.1:
+    resolution: {integrity: sha512-kqyR77z5T3vR3EfhmFvpYdg19dkleHQLdlkEKgVxksqgAe4FnktUJBmVTrxQdOhLXz1RwVdP56brxYajj0RP8w==}
+    engines: {node: '>=16'}
+    dependencies:
+      debug: 4.3.4
+      fs-extra: 11.2.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@xtuc/ieee754@1.2.0:
@@ -2981,16 +2994,6 @@ packages:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
     dev: true
 
-  /flora-colossus@2.0.0:
-    resolution: {integrity: sha512-dz4HxH6pOvbUzZpZ/yXhafjbR2I8cenK5xL0KtBFb7U2ADsR+OwXifnxZjij/pZWF775uSCMzWVd+jDik2H2IA==}
-    engines: {node: '>= 12'}
-    dependencies:
-      debug: 4.3.4
-      fs-extra: 10.1.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /fmix@0.1.0:
     resolution: {integrity: sha512-Y6hyofImk9JdzU8k5INtTXX1cu8LDlePWDFU5sftm9H+zKCr5SGrVjdhkvsim646cw5zD0nADj8oHyXMZmCZ9w==}
     requiresBuild: true
@@ -3156,7 +3159,7 @@ packages:
     engines: {node: '>= 12'}
     dependencies:
       debug: 4.3.4
-      flora-colossus: 2.0.0
+      flora-colossus: /@xp0/flora-colossus@2.1.1
       fs-extra: 10.1.0
     transitivePeerDependencies:
       - supports-color

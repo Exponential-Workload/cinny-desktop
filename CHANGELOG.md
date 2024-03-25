@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.11
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.10...v1.0.11)
+
+### 🩹 Fixes
+
+- Update workflows ([6b2f901](https://github.com/Exponential-Workload/cinny-desktop/commit/6b2f901))
+- Bump pkg ([b910794](https://github.com/Exponential-Workload/cinny-desktop/commit/b910794))
+
+### 🏡 Chore
+
+- Upgrade deps ([c98792a](https://github.com/Exponential-Workload/cinny-desktop/commit/c98792a))
+- Dependabot.yml moment ([7a1fc8b](https://github.com/Exponential-Workload/cinny-desktop/commit/7a1fc8b))
+
+### ❤️ Contributors
+
+- Exponential-Workload <cc@aaathats3as.com>
+- Expo ([@Exponential-Workload](http://github.com/Exponential-Workload))
+
 ## v1.0.9
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.8...v1.0.9)

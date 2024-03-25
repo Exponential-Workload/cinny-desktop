@@ -22,7 +22,7 @@ jobs:
           sed 's/releases\/latest\/download/releases\/download\/v'$(jq .version package.json)/ util/install-from-dist.sh > util/install-from-dist-v.sh
           mv util/install-from-dist-v.sh util/install-from-dist.sh
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: util
           name: util-dir
@@ -35,17 +35,17 @@ jobs:
       - name: Install zip
         run: sudo apt install zip -y;
       - name: Download Util
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: util-dir
           path: ./util
       - name: Download Ubunut
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-ubunut
           path: ./bin/linux
       - name: Download Michaelsoft Binbows
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-binbows
           path: ./bin/windows

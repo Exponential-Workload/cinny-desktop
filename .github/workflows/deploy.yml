@@ -25,17 +25,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Download Ubunut
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-ubunut
           path: ./_build/ubunut
       - name: Download Michaelsoft Binbows
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-binbows
           path: ./_build/window
       # - name: Download Sacking the OS
-      #   uses: actions/download-artifact@v3
+      #   uses: actions/download-artifact@v4
       #   with:
       #     name: build-sackos
       #     path: ./_build/mack

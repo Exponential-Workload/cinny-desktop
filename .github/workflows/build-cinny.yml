@@ -10,7 +10,7 @@ jobs:
       - name: Clone Cinny
         run: git clone https://github.com/cinnyapp/cinny.git .
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: latest
       - name: Setup Node
@@ -23,7 +23,7 @@ jobs:
       - name: Build project
         run: pnpm build
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: dist
           name: cinny-build

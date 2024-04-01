@@ -83,8 +83,8 @@ devDependencies:
     specifier: ^6.10.0
     version: 6.10.0(webpack@5.91.0)
   electron:
-    specifier: 29.1.5
-    version: 29.1.5
+    specifier: 29.1.6
+    version: 29.1.6
   eslint-plugin-import:
     specifier: ^2.29.1
     version: 2.29.1(eslint@8.57.0)
@@ -1930,6 +1930,7 @@ packages:
   /commander@9.5.0:
     resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
     engines: {node: ^12.20.0 || >=14}
+    requiresBuild: true
     dev: true
 
   /compare-version@0.1.2:
@@ -2030,6 +2031,7 @@ packages:
 
   /cross-dirname@0.1.0:
     resolution: {integrity: sha512-+R08/oI0nl3vfPcqftZRpytksBXDzOUveBq/NBVx0sUp1axwzPQrKinNx5yd5sxPu8j1wIy8AfnVQ+5eFdha6Q==}
+    requiresBuild: true
     dev: true
 
   /cross-spawn-windows-exe@1.2.0:
@@ -2442,8 +2444,8 @@ packages:
     dev: true
     optional: true
 
-  /electron@29.1.5:
-    resolution: {integrity: sha512-1uWGRw/ffA62lcrklxGUgVxVtOHojsg/nwsYr+/F9cVjipZJn8iPv/ABGIIexhmUqWcho8BqfTJ4osCBa29gBg==}
+  /electron@29.1.6:
+    resolution: {integrity: sha512-UIYfpHR9gRBFKHyejHuXUVQ7nNzZRnoPVOHlijkvqR+DSLwgJ2ZcVVt0LNduNeO8PhPkY1+6kHonL52OTC1cOw==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
     requiresBuild: true
@@ -5143,6 +5145,7 @@ packages:
     resolution: {integrity: sha512-b9Eb8h2eVqNE8edvKdwqkrY6O7kAwmI8kcnBv1NScolYJbo59XUF0noFq+lxbC1yN20bmC0WBEbDC5H/7ASb0A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
+    requiresBuild: true
     dependencies:
       commander: 9.5.0
     dev: true

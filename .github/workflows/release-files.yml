@@ -71,7 +71,7 @@ jobs:
       - name: Squirrel exe
         run: mv bin/windows/make/squirrel.windows/x64/Cinny\ Desktop-*\ Setup.exe ./out/windows-setup-x64.exe;
       - name: Tar Static Cinny
-        run: cd bin/cinny-static && tar -czvf . ../../out/cinny-static.tar.gz
+        run: cd bin/cinny-static && tar -czvf ../../out/cinny-static.tar.gz .
       - name: Chmod Output
         run: chmod +x --recursive out
       - name: Release

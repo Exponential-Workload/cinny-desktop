@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.0.12
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.11...v1.0.12)
+
+### 🚀 Enhancements
+
+- Upgrade before install ([ff853c9](https://github.com/Exponential-Workload/cinny-desktop/commit/ff853c9))
+
+### 🩹 Fixes
+
+- Relase the cinny build used in the same build ([5e0d9d6](https://github.com/Exponential-Workload/cinny-desktop/commit/5e0d9d6))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump @types/node from 20.11.30 to 20.12.2 ([#12](https://github.com/Exponential-Workload/cinny-desktop/pull/12))
+- **deps-dev:** Bump electron from 29.1.5 to 29.1.6 ([#11](https://github.com/Exponential-Workload/cinny-desktop/pull/11))
+- **deps-dev:** Bump css-loader from 6.10.0 to 7.0.0 ([#13](https://github.com/Exponential-Workload/cinny-desktop/pull/13))
+- **deps-dev:** Bump @types/node from 20.12.2 to 20.12.5 ([#16](https://github.com/Exponential-Workload/cinny-desktop/pull/16))
+- **deps-dev:** Bump electron from 29.1.6 to 29.3.0 ([#18](https://github.com/Exponential-Workload/cinny-desktop/pull/18))
+- **deps-dev:** Bump typescript from 5.4.3 to 5.4.5 ([#17](https://github.com/Exponential-Workload/cinny-desktop/pull/17))
+- Upgrade everything ([f51fab2](https://github.com/Exponential-Workload/cinny-desktop/commit/f51fab2))
+
+### ❤️ Contributors
+
+- Expo ([@Exponential-Workload](http://github.com/Exponential-Workload))
+
 ## v1.0.11
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.10...v1.0.11)

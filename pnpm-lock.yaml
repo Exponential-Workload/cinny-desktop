@@ -83,8 +83,8 @@ devDependencies:
     specifier: ^7.0.0
     version: 7.0.0(webpack@5.91.0)
   electron:
-    specifier: 29.1.6
-    version: 29.1.6
+    specifier: 29.3.0
+    version: 29.3.0
   eslint-plugin-import:
     specifier: ^2.29.1
     version: 2.29.1(eslint@8.57.0)
@@ -2444,8 +2444,8 @@ packages:
     dev: true
     optional: true
 
-  /electron@29.1.6:
-    resolution: {integrity: sha512-UIYfpHR9gRBFKHyejHuXUVQ7nNzZRnoPVOHlijkvqR+DSLwgJ2ZcVVt0LNduNeO8PhPkY1+6kHonL52OTC1cOw==}
+  /electron@29.3.0:
+    resolution: {integrity: sha512-ZxFKm0/v48GSoBuO3DdnMlCYXefEUKUHLMsKxyXY4nZGgzbBKpF/X8haZa2paNj23CLfsCKBOtfc2vsEQiOOsA==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
     requiresBuild: true

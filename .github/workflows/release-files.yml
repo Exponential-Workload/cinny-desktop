@@ -49,6 +49,11 @@ jobs:
         with:
           name: build-binbows
           path: ./bin/windows
+      - name: Download Plain Cinny
+        uses: actions/download-artifact@v4
+        with:
+          name: cinny-build
+          path: ./bin/cinny-static
       - name: Make output dir
         run: mkdir out
       - name: Chmod Binaries
@@ -65,6 +70,8 @@ jobs:
         run: cd bin/windows/Cinny\ Desktop-win32-x64; zip -r ../../../out/windows-bin-x64.zip .;
       - name: Squirrel exe
         run: mv bin/windows/make/squirrel.windows/x64/Cinny\ Desktop-*\ Setup.exe ./out/windows-setup-x64.exe;
+      - name: Tar Static Cinny
+        run: cd bin/cinny-static && tar -czvf . ../../out/cinny-static.tar.gz
       - name: Chmod Output
         run: chmod +x --recursive out
       - name: Release
@@ -78,3 +85,4 @@ jobs:
             out/debian-x64.deb
             out/windows-bin-x64.zip
             out/windows-setup-x64.exe
+            out/cinny-static.tar.gz

@@ -37,20 +37,14 @@ jobs:
         run: |
           git config --global user.name "Logout"
           git config --global user.email "logout@users.noreply.github.com"
-          sudo apt install zip -y
-          cd dist
-          zip -r ../cinny.zip *
-          cd ..
           mv dist /tmp/cinny
-          mv cinny.zip /tmp/cinny.zip
           rm -rf .git
           cd cinny-builds
           mv .git /tmp/cinny.git
-          rm -rf ./*
+          rm -rf ./* ./.*
           mv /tmp/cinny.git .git
-          mv /tmp/cinny dist
-          mv /tmp/cinny.zip cinny.zip
+          mv /tmp/cinny .
           # git remote set-url origin https://git@github.com/Exponential-Workload/cinny-desktop.git
           git add .
-          git commit -m "build: Build Cinny"
-          git push origin cinny-builds
+          git commit -a -m "build: Build Cinny"
+          git push -u origin cinny-builds

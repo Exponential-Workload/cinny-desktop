@@ -4,6 +4,7 @@ on:
     branches:
       - '*'
       - '!master'
+      - '!cinny-builds'
   pull_request:
   workflow_dispatch:
   workflow_call:

@@ -29,7 +29,11 @@ jobs:
         with:
           path: dist
           name: cinny-build
-      - name: Compress to zip archive
+      - name: Prepare for pushing to cinny-builds
+        uses: actions/checkout@v4
+        with:
+          path: cinny-builds
+      - name: Push to cinny-builds
         run: |
           git config --global user.name "Logout"
           git config --global user.email "logout@users.noreply.github.com"
@@ -39,12 +43,14 @@ jobs:
           cd ..
           mv dist /tmp/cinny
           mv cinny.zip /tmp/cinny.zip
-          git checkout -b cinny-builds
+          rm -rf .git
+          cd cinny-builds
           mv .git /tmp/cinny.git
           rm -rf ./*
           mv /tmp/cinny.git .git
           mv /tmp/cinny dist
           mv /tmp/cinny.zip cinny.zip
+          # git remote set-url origin https://git@github.com/Exponential-Workload/cinny-desktop.git
           git add .
           git commit -m "build: Build Cinny"
           git push origin cinny-builds

@@ -330,8 +330,13 @@ const bufferToStream = (buffer: Buffer): Readable => {
       if (!buildArti)
         throw new Error('Found artifacts but none had the name cinny-build!');
 
+      // const zipFile = Buffer.from(
+      //   await (await fetch(buildArti.archive_download_url)).arrayBuffer(),
+      // );
+
+      // hotfix because github is bad and doesnt let me make artifacts publicly downloadable:
       const zipFile = Buffer.from(
-        await (await fetch(buildArti.archive_download_url)).arrayBuffer(),
+        await (await fetch(buildArti.archive_download_url)).arrayBuffer(), // todo: use new branch
       );
 
       const zipPath = path.join(tmpdir(), 'artifact.zip');

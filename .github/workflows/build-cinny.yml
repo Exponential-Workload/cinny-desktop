@@ -42,7 +42,7 @@ jobs:
           rm -rf .git
           cd cinny-builds
           mv .git /tmp/cinny.git
-          rm -rf ./* ./.*
+          rm -rf ./*
           mv /tmp/cinny.git .git
           mv /tmp/cinny .
           # git remote set-url origin https://git@github.com/Exponential-Workload/cinny-desktop.git

@@ -34,6 +34,7 @@ jobs:
         with:
           path: cinny-builds
       - name: Push to cinny-builds
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           git config --global user.name "Logout"
           git config --global user.email "logout@users.noreply.github.com"

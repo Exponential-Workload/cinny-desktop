@@ -10,8 +10,9 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "dev": "node ./run-dev.js",
-    "build": "node ./update-cinny.js && electron-forge make"
+    "dev": "npm run update-cinny && node ./run-dev.js",
+    "build": "npm run update-cinny && electron-forge make",
+    "update-cinny": "ts-node update-cinny"
   },
   "keywords": [],
   "author": "Expo",
@@ -37,12 +38,15 @@
     "electron": "30.0.1",
     "eslint-plugin-import": "^2.29.1",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "jszip": "^3.10.1",
     "node-loader": "^2.0.0",
     "style-loader": "^4.0.0",
+    "tar": "^7.0.1",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "~5.4.5",
-    "webpack": "^5.91.0"
+    "webpack": "^5.91.0",
+    "zod": "^3.23.0"
   },
   "dependencies": {
     "chalk": "^5.3.0",
@@ -50,8 +54,7 @@
     "express": "^4.19.2",
     "fs-extra": "^11.2.0",
     "random-port": "^0.1.0",
-    "semver": "^7.6.0",
-    "zod": "^3.23.0"
+    "semver": "^7.6.0"
   },
   "build": {
     "appId": "moe.expo.cinny"

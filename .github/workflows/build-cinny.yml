@@ -2,6 +2,8 @@ name: Build Cinny
 on:
   workflow_dispatch:
   workflow_call:
+  schedule:
+    - cron: '0 12 * * *'
 
 jobs:
   build-cinny:

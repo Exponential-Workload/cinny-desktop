@@ -24,7 +24,7 @@ jobs:
         run: npm i
       - name: Upgrade dependencies
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        run: npm upgrade -L
+        run: npm upgrade
       - name: Build project
         run: pnpm build
       - name: Upload

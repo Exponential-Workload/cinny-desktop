@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.1.0
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.12...v1.1.0)
+
+### 🩹 Fixes
+
+- Swap tar operation order ([f0c21be](https://github.com/Exponential-Workload/cinny-desktop/commit/f0c21be))
+- **cinny:** Fallback to index.html ([e9cb986](https://github.com/Exponential-Workload/cinny-desktop/commit/e9cb986))
+- Mark as private ([c595174](https://github.com/Exponential-Workload/cinny-desktop/commit/c595174))
+
+### 🏡 Chore
+
+- Move to fonts.arson.wtf ([9eb1354](https://github.com/Exponential-Workload/cinny-desktop/commit/9eb1354))
+- **deps-dev:** Bump @electron-forge/cli from 7.3.1 to 7.4.0 ([#23](https://github.com/Exponential-Workload/cinny-desktop/pull/23))
+- **deps-dev:** Bump @electron-forge/maker-flatpak from 7.3.1 to 7.4.0 ([#22](https://github.com/Exponential-Workload/cinny-desktop/pull/22))
+- **deps-dev:** Bump @electron-forge/shared-types from 7.3.1 to 7.4.0 ([#19](https://github.com/Exponential-Workload/cinny-desktop/pull/19))
+- Upgrade deps ([0aeaff5](https://github.com/Exponential-Workload/cinny-desktop/commit/0aeaff5))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.0.12
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.11...v1.0.12)

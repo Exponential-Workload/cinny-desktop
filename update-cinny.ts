@@ -72,7 +72,7 @@ let srcDir = existsSync('.cinny')
 
     console.log('Extracting to .cinny');
     await tar.x({
-      strip: stable ? 1 : 0,
+      strip: stable ? 0 : 1,
       gzip: true,
       cwd: path.join(process.cwd(), '.cinny'),
       file: tgzPath,

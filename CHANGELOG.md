@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.1.1
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.0...v1.1.1)
+
+### 🚀 Enhancements
+
+- Make update-cinny download build artifacts when the developer has none, have CI build Cinny artifacts to the [`cinny-builds`](https://github.com/Exponential-Workload/cinny-desktop/tree/cinny-builds) branch ([ab90470](https://github.com/Exponential-Workload/cinny-desktop/commit/ab90470), [d82adc2](https://github.com/Exponential-Workload/cinny-desktop/commit/d82adc2), [148319b](https://github.com/Exponential-Workload/cinny-desktop/commit/148319b), [1c3b10d](https://github.com/Exponential-Workload/cinny-desktop/commit/1c3b10d), [05adcff](https://github.com/Exponential-Workload/cinny-desktop/commit/05adcff), [508057e](https://github.com/Exponential-Workload/cinny-desktop/commit/508057e), [d156a4a](https://github.com/Exponential-Workload/cinny-desktop/commit/d156a4a), [8f8495c](https://github.com/Exponential-Workload/cinny-desktop/commit/8f8495c), [8d8669e](https://github.com/Exponential-Workload/cinny-desktop/commit/8d8669e), [e1658bd](https://github.com/Exponential-Workload/cinny-desktop/commit/e1658bd), [5041da7](https://github.com/Exponential-Workload/cinny-desktop/commit/5041da7), [6809f05](https://github.com/Exponential-Workload/cinny-desktop/commit/6809f05), [3a6b9f3](https://github.com/Exponential-Workload/cinny-desktop/commit/3a6b9f3), [5104d3d](https://github.com/Exponential-Workload/cinny-desktop/commit/5104d3d), [6252cc7](https://github.com/Exponential-Workload/cinny-desktop/commit/6252cc7), [b82d7fd](https://github.com/Exponential-Workload/cinny-desktop/commit/b82d7fd), [0cead68](https://github.com/Exponential-Workload/cinny-desktop/commit/0cead68), [d890ab1](https://github.com/Exponential-Workload/cinny-desktop/commit/d890ab1), [51ca93f](https://github.com/Exponential-Workload/cinny-desktop/commit/51ca93f))
+- Make the new [`cinny-builds`](https://github.com/Exponential-Workload/cinny-desktop/tree/cinny-builds) branch contain more up-to-date dependencies, assuming upstream isnt annoying with their semver ranges (i didnt check) ([4245b75](https://github.com/Exponential-Workload/cinny-desktop/commit/4245b75))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.0
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.0.12...v1.1.0)

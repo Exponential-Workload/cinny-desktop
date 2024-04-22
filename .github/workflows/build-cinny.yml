@@ -45,8 +45,8 @@ jobs:
           mv .git /tmp/cinny.git
           rm -rf ./*
           mv /tmp/cinny.git .git
-          mv /tmp/cinny .
+          mv /tmp/cinny/* ./
           # git remote set-url origin https://git@github.com/Exponential-Workload/cinny-desktop.git
           git add .
-          git commit -a -m "build: Build Cinny"
+          git commit -a -m "build: Build Cinny ($(date -u +%Y-%m-%dT%H:%M:%S%Z))"
           git push -u origin cinny-builds

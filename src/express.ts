@@ -15,6 +15,13 @@ export const createApp = () => {
         index: 'index.html',
       }),
     ); // see webpack main config
+
+    app.use((req, res) =>
+      res
+        .status(299)
+        .sendFile(path.resolve(__dirname, 'static', 'app', 'index.html')),
+    );
+
     _app = app;
   }
   return _app;

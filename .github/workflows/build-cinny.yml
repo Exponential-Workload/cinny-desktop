@@ -30,6 +30,7 @@ jobs:
           path: dist
           name: cinny-build
       - name: Prepare for pushing to cinny-builds
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: actions/checkout@v4
         with:
           path: cinny-builds

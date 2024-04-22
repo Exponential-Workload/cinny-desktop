@@ -33,6 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: cinny-builds
+          ref: cinny-builds
       - name: Push to cinny-builds
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |

@@ -63,5 +63,6 @@
     "overrides": {
       "flora-colossus": "npm:@xp0/flora-colossus@latest"
     }
-  }
+  },
+  "private": true
 }

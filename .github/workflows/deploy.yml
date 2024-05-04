@@ -24,6 +24,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Download Cinny
+        uses: actions/download-artifact@v4
+        with:
+          name: cinny-builds
+          path: ./_build/cinny
       - name: Download Ubunut
         uses: actions/download-artifact@v4
         with:

@@ -1,5 +1,51 @@
 # Changelog
 
+## v1.1.2
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.0...v1.1.2)
+
+### 🚀 Enhancements
+
+- Push to cinny-builds branch ([51ca93f](https://github.com/Exponential-Workload/cinny-desktop/commit/51ca93f))
+- Download from the new branch :3 ([d890ab1](https://github.com/Exponential-Workload/cinny-desktop/commit/d890ab1))
+- Give a complete message ([0cead68](https://github.com/Exponential-Workload/cinny-desktop/commit/0cead68))
+- Fuck it, upgrade deps when building to the branch ([4245b75](https://github.com/Exponential-Workload/cinny-desktop/commit/4245b75))
+- Also push plain cinny to output ([41cd1cf](https://github.com/Exponential-Workload/cinny-desktop/commit/41cd1cf))
+
+### 🩹 Fixes
+
+- Use the right repo ([ab90470](https://github.com/Exponential-Workload/cinny-desktop/commit/ab90470))
+- Only dispatch & schedule should push ([d82adc2](https://github.com/Exponential-Workload/cinny-desktop/commit/d82adc2))
+- Dont attempt to remove hidden files ([148319b](https://github.com/Exponential-Workload/cinny-desktop/commit/148319b))
+- Use ref cinny-builds ([1c3b10d](https://github.com/Exponential-Workload/cinny-desktop/commit/1c3b10d))
+- Move files from dir ([05adcff](https://github.com/Exponential-Workload/cinny-desktop/commit/05adcff))
+- Download tgz's always and use branch ([508057e](https://github.com/Exponential-Workload/cinny-desktop/commit/508057e))
+- Skip checkout when not pushing ([d156a4a](https://github.com/Exponential-Workload/cinny-desktop/commit/d156a4a))
+- Swap strip order ([8f8495c](https://github.com/Exponential-Workload/cinny-desktop/commit/8f8495c))
+- Only commit on changes ([8d8669e](https://github.com/Exponential-Workload/cinny-desktop/commit/8d8669e))
+- Dont run build on cinny-builds ([e1658bd](https://github.com/Exponential-Workload/cinny-desktop/commit/e1658bd))
+- Only call git add if changes ([5041da7](https://github.com/Exponential-Workload/cinny-desktop/commit/5041da7))
+- Ignore errors in commit ([6809f05](https://github.com/Exponential-Workload/cinny-desktop/commit/6809f05))
+- Use cinny repo for msg commit ids ([3a6b9f3](https://github.com/Exponential-Workload/cinny-desktop/commit/3a6b9f3))
+- Just normal upgrade, fuck npm ([5104d3d](https://github.com/Exponential-Workload/cinny-desktop/commit/5104d3d))
+
+### 🏡 Chore
+
+- Tmp ignore ([a5f42a2](https://github.com/Exponential-Workload/cinny-desktop/commit/a5f42a2))
+- Upgrade in dev, and never upload dev artifacts to cinny-build ([6252cc7](https://github.com/Exponential-Workload/cinny-desktop/commit/6252cc7))
+- **release:** V1.1.1 ([72616a5](https://github.com/Exponential-Workload/cinny-desktop/commit/72616a5))
+- **deps-dev:** Bump tar from 7.0.1 to 7.1.0 ([#24](https://github.com/Exponential-Workload/cinny-desktop/pull/24))
+- **deps-dev:** Bump electron from 30.0.1 to 30.0.2 ([#26](https://github.com/Exponential-Workload/cinny-desktop/pull/26))
+- **deps-dev:** Bump @types/node from 20.12.8 to 20.12.10 ([#28](https://github.com/Exponential-Workload/cinny-desktop/pull/28))
+
+### 🤖 CI
+
+- Hopefully get it working ([b82d7fd](https://github.com/Exponential-Workload/cinny-desktop/commit/b82d7fd))
+
+### ❤️ Contributors
+
+- Expo ([@Exponential-Workload](http://github.com/Exponential-Workload))
+
 ## v1.1.1
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.0...v1.1.1)

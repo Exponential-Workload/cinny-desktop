@@ -1,0 +1,54 @@
+name: Build Cinny Dev
+on:
+  workflow_dispatch:
+  workflow_call:
+  schedule:
+    - cron: '0 12 * * *'
+
+jobs:
+  build-cinny-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Cinny
+        run: git clone https://github.com/cinnyapp/cinny.git .
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm i
+      - name: Upgrade dependencies
+        run: npm upgrade
+      - name: Build project
+        run: pnpm build
+      - name: Upload Dev
+        uses: actions/upload-artifact@v4
+        with:
+          path: dist
+          name: cinny-build-dev
+      - name: Prepare for pushing to cinny-builds
+        uses: actions/checkout@v4
+        with:
+          path: cinny-builds
+          ref: cinny-builds
+      - name: Push to cinny-builds
+        run: |
+          git rev-parse --short HEAD > /tmp/short-commit
+          git rev-parse HEAD > /tmp/long-commit
+          git config --global user.name "Logout"
+          git config --global user.email "logout@users.noreply.github.com"
+          mv dist /tmp/cinny
+          rm -rf .git
+          cd cinny-builds
+          mv .git /tmp/cinny.git
+          rm -rf ./*
+          mv /tmp/cinny.git .git
+          mv /tmp/cinny/* ./
+          # git remote set-url origin https://git@github.com/Exponential-Workload/cinny-desktop.git
+          git add . && git commit -a -m "$(echo -ne "build: Build Cinny\nBuild finished at approx.: $(date -u +%Y-%m-%dT%H:%M:%S%Z)\nUpstream Commit: $(cat /tmp/short-commit); https://github.com/cinnyapp/cinny/commit/$(cat /tmp/long-commit)\nLast Update: $(git rev-parse --short HEAD)\nNote: Commits on the 'cinny-builds' branch use upgraded dependencies - as such they may contain bugs not found in upstream/official releases." )" || true
+          git push -u origin cinny-builds

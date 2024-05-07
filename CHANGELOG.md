@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.1.3
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.2...v1.1.3)
+
+### 🤖 CI
+
+- The artifact name is cinny-build ([91550e8](https://github.com/Exponential-Workload/cinny-desktop/commit/91550e8))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.2
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.0...v1.1.2)

@@ -27,7 +27,7 @@ jobs:
       - name: Download Cinny
         uses: actions/download-artifact@v4
         with:
-          name: cinny-builds
+          name: cinny-build
           path: ./_build/cinny
       - name: Download Ubunut
         uses: actions/download-artifact@v4

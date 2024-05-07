@@ -46,7 +46,7 @@
     "ts-node": "^10.9.2",
     "typescript": "~5.4.5",
     "webpack": "^5.91.0",
-    "zod": "^3.23.0"
+    "zod": "^3.23.6"
   },
   "dependencies": {
     "chalk": "^5.3.0",

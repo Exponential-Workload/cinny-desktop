@@ -54,7 +54,7 @@
     "express": "^4.19.2",
     "fs-extra": "^11.2.0",
     "random-port": "^0.1.0",
-    "semver": "^7.6.0"
+    "semver": "^7.6.2"
   },
   "build": {
     "appId": "moe.expo.cinny"

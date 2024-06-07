@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.1.4
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.3...v1.1.4)
+
+### 🏡 Chore
+
+- Split into 2 workflows; 1 dev, 1 prod ([e55a883](https://github.com/Exponential-Workload/cinny-desktop/commit/e55a883))
+- Upgrade pnpm/action-setup to v4 ([3936721](https://github.com/Exponential-Workload/cinny-desktop/commit/3936721))
+- **deps-dev:** Bump electron from 30.0.2 to 30.0.8 ([#36](https://github.com/Exponential-Workload/cinny-desktop/pull/36))
+- Upgrade deps ([847517e](https://github.com/Exponential-Workload/cinny-desktop/commit/847517e))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.3
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.2...v1.1.3)

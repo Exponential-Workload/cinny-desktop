@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.1.6
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.5...v1.1.6)
+
+### 🩹 Fixes
+
+- **non-issue:** Github complained we aren't rate limiting, so now we are ([02858e5](https://github.com/Exponential-Workload/cinny-desktop/commit/02858e5))
+- For some reason cinny tries to load from /home/[...].wasm ([149f731](https://github.com/Exponential-Workload/cinny-desktop/commit/149f731))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.5
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.4...v1.1.5)

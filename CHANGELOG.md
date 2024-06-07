@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.1.5
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.4...v1.1.5)
+
+### 🩹 Fixes
+
+- Use @vercel/webpack-asset-relocator-loader@1.7.3 ([e8088e0](https://github.com/Exponential-Workload/cinny-desktop/commit/e8088e0))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.4
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.3...v1.1.4)

@@ -66,12 +66,13 @@ export default async () => {
   let first = true;
   setInterval(async () => {
     const userId = localStorage.getItem('cinny_user_id');
-    let userPfp = document
-      .querySelector('.avatar-container > img[src]')
-      ?.getAttribute('src');
+    const avatarContainer = document.querySelector(
+      '.avatar-container > img[src]',
+    );
+    let userPfp = avatarContainer?.getAttribute('src');
 
     if (!userId) delApp();
-    else {
+    else if (avatarContainer) {
       if (!userPfp) userPfp = first ? 'cinny://app/favicon.png' : pfp;
       first = false;
       if (!binaryPfp || pfp !== userPfp) {

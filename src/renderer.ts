@@ -85,7 +85,7 @@ export default async () => {
       }
       pfp = userPfp;
       updApp(userId, binaryPfp);
-    }
+    } else updApp(userId);
   }, 1024);
 
   let lastContainer = null as null | HTMLDivElement;

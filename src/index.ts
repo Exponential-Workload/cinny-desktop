@@ -123,27 +123,27 @@ protocol.registerSchemesAsPrivileged(priv);
 const cfgPath = path.join(app.getPath('userData'), '.cfg');
 let cfg = {
   apps: [] as {
-    userid: string,
-    pfp: string,
-    id: number | null,
+    userid: string;
+    pfp: string;
+    id: number | null;
   }[],
-  latestApp: null as number | null
+  latestApp: null as number | null,
 };
-let f = ''
+let f = '';
 try {
-  f = readFileSync(cfgPath, 'utf-8')
+  f = readFileSync(cfgPath, 'utf-8');
   cfg = {
     ...cfg,
-    ...JSON.parse(f)
-  }
-} catch (error) { }
+    ...JSON.parse(f),
+  };
+} catch (error) {}
 const saveCfg = () => {
   const f2 = JSON.stringify(cfg);
   if (f2 !== f) {
-    writeFileSync(cfgPath, f2)
-    f = f2
+    writeFileSync(cfgPath, f2);
+    f = f2;
   }
-}
+};
 
 const createWindow = (): void => {
   if (process.env.USER === 'root' || process.env.POSTINSTALL) process.exit(0);
@@ -186,7 +186,7 @@ const createWindow = (): void => {
       appId: 'Cinny Desktop',
       appIconPath: `${faviconPath}`,
     });
-  } catch (error) { }
+  } catch (error) {}
   // make new tabs open in user browser
   const registerOpenHandler = (window: BrowserWindow) =>
     window.webContents.setWindowOpenHandler(h => {
@@ -215,16 +215,27 @@ const createWindow = (): void => {
             const id = cfg.apps.length === 0 ? null : cfg.apps.length - 1;
             return new Response('', {
               headers: {
-                'Location': `cinny://app${id === null ? '' : '-'}${id === null ? '' : id}`
+                Location: `cinny://app${id === null ? '' : '-'}${
+                  id === null ? '' : id
+                }`,
               },
               status: 302,
-            })
+            });
           }
           return net.fetch(
-            `http://127.0.0.1:${p}/${request.url.replace(/cinny:\/\/app(-[0-9]+)?\//, '')}`,
-          )
+            `http://127.0.0.1:${p}/${request.url.replace(
+              /cinny:\/\/app(-[0-9]+)?\//,
+              '',
+            )}`,
+          );
         });
-        mainWindow.loadURL(`cinny://app${cfg.apps.find(v => v.id === cfg.latestApp)?.id ? `-${cfg.latestApp}` : ''}/`);
+        mainWindow.loadURL(
+          `cinny://app${
+            cfg.apps.find(v => v.id === cfg.latestApp)?.id
+              ? `-${cfg.latestApp}`
+              : ''
+          }/`,
+        );
         (async () => {
           console.log(`${prefix} Checking for updates...`);
           const updCheckRes = z
@@ -299,31 +310,39 @@ app.on('ready', () => {
     (event, name?: string) =>
       `Hello from Electron Main Process, ${name ?? 'User'}!`,
   );
-  ipcMain.handle('close-window', (event) => {
+  ipcMain.handle('close-window', event => {
     event.sender.close();
   });
-  ipcMain.handle('close-app', (event) => {
+  ipcMain.handle('close-app', event => {
     app.quit();
   });
-  ipcMain.handle('update-app', (event, url: string, pfp: string, userid: string) => {
-    let appId = Number(new URL(url).hostname.split('-')[1] ?? -1) as number | null
-    if (appId < 0) appId = null
-    cfg.apps = cfg.apps.filter(v => v.id !== appId);
-    cfg.apps.unshift({
-      id: appId,
-      pfp,
-      userid
-    })
-    cfg.latestApp = appId
-    saveCfg();
-    return cfg
-  });
+  ipcMain.handle(
+    'update-app',
+    (event, url: string, pfp: string | undefined, userid: string) => {
+      let appId = Number(new URL(url).hostname.split('-')[1] ?? -1) as
+        | number
+        | null;
+      if (appId < 0) appId = null;
+      if (!pfp) pfp = cfg.apps.find(v => v.id === appId)?.pfp;
+      cfg.apps = cfg.apps.filter(v => v.id !== appId);
+      cfg.apps.unshift({
+        id: appId,
+        pfp,
+        userid,
+      });
+      cfg.latestApp = appId;
+      saveCfg();
+      return cfg;
+    },
+  );
   ipcMain.handle('del-app', (event, url: string) => {
-    let appId = Number(new URL(url).hostname.split('-')[1] ?? -1) as number | null
-    if (appId < 0) appId = null
+    let appId = Number(new URL(url).hostname.split('-')[1] ?? -1) as
+      | number
+      | null;
+    if (appId < 0) appId = null;
     cfg.apps = cfg.apps.filter(v => v.id !== appId);
     saveCfg();
-    return cfg
+    return cfg;
   });
   ipcMain.handle('get-cfg', () => cfg);
 });

@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.1.7
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.6...v1.1.7)
+
+### 🚀 Enhancements
+
+- Store base64'ed icons ([1076c5d](https://github.com/Exponential-Workload/cinny-desktop/commit/1076c5d))
+
+### 🩹 Fixes
+
+- Add git revision to cinny versions ([0c64200](https://github.com/Exponential-Workload/cinny-desktop/commit/0c64200))
+- Make profile pictures update with new cinny (only works in settings - please cinny devs dont randomize classes there too!!) ([debcdbd](https://github.com/Exponential-Workload/cinny-desktop/commit/debcdbd))
+- Dont update anything till the avatarcontainer was shown atleast once ([84d9ee8](https://github.com/Exponential-Workload/cinny-desktop/commit/84d9ee8))
+- If no avatar, still call updApp ([84ea68a](https://github.com/Exponential-Workload/cinny-desktop/commit/84ea68a))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.6
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.5...v1.1.6)

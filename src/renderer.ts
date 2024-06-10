@@ -61,6 +61,7 @@ export default async () => {
   );
 
   let pfp = '';
+  let binaryPfp = '';
 
   let first = true;
   setInterval(async () => {
@@ -73,8 +74,16 @@ export default async () => {
     else {
       if (!userPfp) userPfp = first ? 'cinny://app/favicon.png' : pfp;
       first = false;
+      if (!binaryPfp || pfp !== userPfp) {
+        const profileRs = await fetch(userPfp);
+        const profilePicture = await profileRs.arrayBuffer();
+        const mime = profileRs.headers.get('Content-Type') ?? 'image/png';
+        binaryPfp = `data:${encodeURIComponent(
+          mime,
+        )};base64,${encodeURIComponent(base64ArrayBuffer(profilePicture))}`;
+      }
       pfp = userPfp;
-      updApp(userId, userPfp);
+      updApp(userId, binaryPfp);
     }
   }, 1024);
 

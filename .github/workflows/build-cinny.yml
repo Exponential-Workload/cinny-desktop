@@ -16,7 +16,7 @@ jobs:
       - name: Install jq
         run: sudo apt install jq
       - name: Update Version
-        run: jq '.version = "'"$(jq .version package.json)-git-$(git rev-parse --short HEAD | tr -d '[:space:]')"'"' package.json > tmp.json && mv tmp.json package.json
+        run: jq '.version = "'"$(jq .version package.json -r)-git-$(git rev-parse --short HEAD | tr -d '[:space:]')"'"' package.json > tmp.json && mv tmp.json package.json
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

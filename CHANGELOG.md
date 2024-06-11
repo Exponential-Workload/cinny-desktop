@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.1.8
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.7...v1.1.8)
+
+### 🩹 Fixes
+
+- Pass -r to jq ([0c28615](https://github.com/Exponential-Workload/cinny-desktop/commit/0c28615))
+- Add -r to the other build aswell ([e118e64](https://github.com/Exponential-Workload/cinny-desktop/commit/e118e64))
+
+### 🏡 Chore
+
+- **release:** V1.1.8 ([153a7ce](https://github.com/Exponential-Workload/cinny-desktop/commit/153a7ce))
+- Revert 1.1.8 ([1081336](https://github.com/Exponential-Workload/cinny-desktop/commit/1081336))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.7
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.6...v1.1.7)

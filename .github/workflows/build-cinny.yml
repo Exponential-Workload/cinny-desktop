@@ -23,7 +23,9 @@ jobs:
           node-version: 'latest'
           cache: 'npm'
       - name: Install dependencies
-        run: npm i
+        run: |
+          npm i
+          pnpm i -g vite
       - name: Upgrade dependencies
         run: npm upgrade
       - name: Build project

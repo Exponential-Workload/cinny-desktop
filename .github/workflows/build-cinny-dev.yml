@@ -25,7 +25,9 @@ jobs:
       - name: Update Version
         run: jq '.version = "'"$(jq .version package.json -r)-git-$(git rev-parse --short HEAD | tr -d '[:space:]')"'"' package.json > tmp.json && mv tmp.json package.json
       - name: Install dependencies
-        run: npm i
+        run: |
+          npm i
+          pnpm i -g vite
       - name: Upgrade dependencies
         run: npm upgrade
       - name: Build project

@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.1.9
+
+[compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.8...v1.1.9)
+
+### 🩹 Fixes
+
+- Vite ([148d949](https://github.com/Exponential-Workload/cinny-desktop/commit/148d949))
+- Pin for secu reasons ([832af3f](https://github.com/Exponential-Workload/cinny-desktop/commit/832af3f))
+- Util -> contrib ([397174f](https://github.com/Exponential-Workload/cinny-desktop/commit/397174f))
+- Contribify ([b7b5ee6](https://github.com/Exponential-Workload/cinny-desktop/commit/b7b5ee6))
+- Install vite ([bd2e4fe](https://github.com/Exponential-Workload/cinny-desktop/commit/bd2e4fe))
+- Fallback to pnpm ([ec3bbd8](https://github.com/Exponential-Workload/cinny-desktop/commit/ec3bbd8))
+- Make this work ([c6fb5b4](https://github.com/Exponential-Workload/cinny-desktop/commit/c6fb5b4))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump tar from 7.2.0 to 7.4.0 ([#47](https://github.com/Exponential-Workload/cinny-desktop/pull/47))
+- **deps-dev:** Bump electron from 30.1.0 to 31.0.2 ([#45](https://github.com/Exponential-Workload/cinny-desktop/pull/45))
+- **deps-dev:** Bump typescript from 5.4.5 to 5.5.2 ([#43](https://github.com/Exponential-Workload/cinny-desktop/pull/43))
+- **deps-dev:** Bump electron from 31.0.2 to 31.2.0 ([#52](https://github.com/Exponential-Workload/cinny-desktop/pull/52))
+- **deps-dev:** Bump webpack from 5.92.1 to 5.93.0 ([#53](https://github.com/Exponential-Workload/cinny-desktop/pull/53))
+- **deps-dev:** Bump typescript from 5.5.2 to 5.5.3 ([#50](https://github.com/Exponential-Workload/cinny-desktop/pull/50))
+
+### ❤️ Contributors
+
+- Expo <expo@expo.moe>
+
 ## v1.1.8
 
 [compare changes](https://github.com/Exponential-Workload/cinny-desktop/compare/v1.1.7...v1.1.8)

@@ -73,8 +73,8 @@ importers:
         specifier: 7.5.8
         version: 7.5.8
       '@vercel/webpack-asset-relocator-loader':
-        specifier: 1.7.4
-        version: 1.7.4
+        specifier: 1.7.3
+        version: 1.7.3
       copy-webpack-plugin:
         specifier: 12.0.2
         version: 12.0.2(webpack@5.93.0)
@@ -734,8 +734,8 @@ packages:
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
 
-  '@vercel/webpack-asset-relocator-loader@1.7.4':
-    resolution: {integrity: sha512-RFFite6v51Qhj/eERru3qwUNCLybnceSChI5yiu9bhLpTemWbKPORAOExOgpO2W7IE/0UEh3aX6wTSHgDE/fdQ==}
+  '@vercel/webpack-asset-relocator-loader@1.7.3':
+    resolution: {integrity: sha512-vizrI18v8Lcb1PmNNUBz7yxPxxXoOeuaVEjTG9MjvDrphjiSxFZrRJ5tIghk+qdLFRCXI5HBCshgobftbmrC5g==}
 
   '@webassemblyjs/ast@1.12.1':
     resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==}
@@ -4659,7 +4659,7 @@ snapshots:
       '@types/node': 20.14.11
     optional: true
 
-  '@vercel/webpack-asset-relocator-loader@1.7.4':
+  '@vercel/webpack-asset-relocator-loader@1.7.3':
     dependencies:
       resolve: 1.22.8
 

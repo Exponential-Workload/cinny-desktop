@@ -19,13 +19,13 @@ jobs:
         run: sudo apt install jq -y;
       - name: Set version in Installation Script
         run: |
-          sed 's/releases\/latest\/download/releases\/download\/v'$(jq .version package.json)/ util/install-from-dist.sh > util/install-from-dist-v.sh
-          mv util/install-from-dist-v.sh util/install-from-dist.sh
+          sed 's/releases\/latest\/download/releases\/download\/v'$(jq .version package.json)/ contrib/install-from-dist.sh > contrib/install-from-dist-v.sh
+          mv contrib/install-from-dist-v.sh contrib/install-from-dist.sh
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          path: util
-          name: util-dir
+          path: contrib
+          name: contrib-dir
   build-os:
     uses: ./.github/workflows/build.yml
   release:
@@ -34,11 +34,11 @@ jobs:
     steps:
       - name: Install zip
         run: sudo apt install zip -y;
-      - name: Download Util
+      - name: Download contrib
         uses: actions/download-artifact@v4
         with:
-          name: util-dir
-          path: ./util
+          name: contrib-dir
+          path: ./contrib
       - name: Download Ubunut
         uses: actions/download-artifact@v4
         with:
@@ -59,7 +59,7 @@ jobs:
       - name: Chmod Binaries
         run: chmod +x --recursive bin
       - name: Linux Install Script
-        run: mv util/install-from-dist.sh out/linux-install-x64.sh;
+        run: mv contrib/install-from-dist.sh out/linux-install-x64.sh;
       - name: Tar Linux Plain
         run: cd bin/linux/Cinny\ Desktop-linux-x64; tar -czvf ../../../out/linux-bin-x64.tar.gz .;
       - name: Zip Linux Plain

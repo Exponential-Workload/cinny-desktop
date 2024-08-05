@@ -82,8 +82,8 @@ importers:
         specifier: 7.1.2
         version: 7.1.2(webpack@5.93.0)
       electron:
-        specifier: 31.2.1
-        version: 31.2.1
+        specifier: 31.3.1
+        version: 31.3.1
       eslint-plugin-import:
         specifier: 2.29.1
         version: 2.29.1(eslint@9.7.0)
@@ -1437,8 +1437,8 @@ packages:
     resolution: {integrity: sha512-oM8BW3a8NEqG0XW+Vx3xywhk0DyDV4T0jT0zZfWt0IczNT3jHAAvQWBorF8osQDplSsCyXXyxrsrQ8cY0Slb/A==}
     engines: {node: '>=8.0.0'}
 
-  electron@31.2.1:
-    resolution: {integrity: sha512-g3CLKjl4yuXt6VWm/KpgEjYYhFiCl19RgUn8lOC8zV/56ZXAS3+mqV4wWzicE/7vSYXs6GRO7vkYRwrwhX3Gaw==}
+  electron@31.3.1:
+    resolution: {integrity: sha512-9fiuWlRhBfygtcT+auRd/WdBK/f8LZZcrpx0RjpXhH2DPTP/PfnkC4JB1PW55qCbGbh4wAgkYbf4ExIag8oGCA==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -5488,7 +5488,7 @@ snapshots:
       - supports-color
     optional: true
 
-  electron@31.2.1:
+  electron@31.3.1:
     dependencies:
       '@electron/get': 2.0.3
       '@types/node': 20.14.11
